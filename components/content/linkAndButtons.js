@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Text } from "./content";
-import Image from "next/Image";
+import Image from "next/image";
 
 export const IntraPageLink = (props) => {
   return (

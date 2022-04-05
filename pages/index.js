@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BigTriangleBackground } from "../components/decorations/decorations";
-import Image from "next/Image";
+import Image from "next/image";
 import { Column } from "../components/layouts/layoutElements";
 import {
   InlineLink,
