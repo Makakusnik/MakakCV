@@ -1,7 +1,4 @@
 {
-  "presets": [
-    "@babel/preset-react"
-  ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "requireConfigFile": false,
