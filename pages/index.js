@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import {
-  BigTriangleBackground,
-  SmallTriangleBackground,
-} from "../components/decorations/decorations";
+import { BigTriangleBackground } from "../components/decorations/decorations";
 import Image from "next/Image";
 import { Column } from "../components/layouts/layoutElements";
 import {
@@ -10,15 +7,11 @@ import {
   ImageContainer,
   PrimaryColorText,
   Section,
-  SectionArticle,
   Text,
   Title,
 } from "../components/content/content";
 import { IntraPageLink } from "../components/content/linkAndButtons";
-import {
-  ExperienceItem,
-  ExperienceItemLeft,
-} from "../components/content/timeline";
+import { ExperienceItem } from "../components/content/timeline";
 import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
 import { Field } from "../components/content/inputField";
@@ -148,6 +141,7 @@ export default function Home() {
                       width="110"
                       height="110"
                       src="/SosHandlova.svg"
+                      alt="Logo of Handlova High School"
                     ></Image>
                     <figcaption aria-hidden="false">
                       School logo of Secondary Vocational School of Handlová
@@ -177,6 +171,7 @@ export default function Home() {
                       width="110"
                       height="110"
                       src="/UniversityOfZilina.svg"
+                      alt="Logo of University of Zilina"
                     ></Image>
                     <figcaption aria-hidden="false">
                       School logo of Secondary Vocational School of Handlová
@@ -212,6 +207,7 @@ export default function Home() {
                       width="260"
                       height="110"
                       src="/Decathlon.svg"
+                      alt="Decathlon Logo."
                     ></Image>
                     <figcaption aria-hidden="false">
                       Decathlon company logo.
@@ -240,6 +236,7 @@ export default function Home() {
                       width="260"
                       height="110"
                       src="/Brainit.svg"
+                      alt="Braint:IT company Logo."
                     ></Image>
                     <figcaption aria-hidden="false">
                       Decathlon company logo.
@@ -262,25 +259,29 @@ export default function Home() {
             <SkillContainer>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/ReactJS.svg" />
+                  <Image layout="fill" src="/ReactJS.svg" alt="ReactJS" />
                 </Skill.ImageContainer>
                 <Skill.Title>React</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/NextJS.svg" />
+                  <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
                 </Skill.ImageContainer>
                 <Skill.Title>Next.js</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/ChakraJs.svg" />
+                  <Image layout="fill" src="/ChakraJs.svg" alt="ChakraJS" />
                 </Skill.ImageContainer>
                 <Skill.Title>Chakra.js</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/StyledComponents.svg" />
+                  <Image
+                    layout="fill"
+                    src="/StyledComponents.svg"
+                    alt="Styled Components"
+                  />
                 </Skill.ImageContainer>
                 <Skill.Title>Styled Components</Skill.Title>
               </Skill>
@@ -293,19 +294,19 @@ export default function Home() {
             <SkillContainer>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/ExpressJS.svg" />
+                  <Image layout="fill" src="/ExpressJS.svg" alt="ExpressJS" />
                 </Skill.ImageContainer>
                 <Skill.Title>Express.js</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/NodeJS.svg" />
+                  <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
                 </Skill.ImageContainer>
                 <Skill.Title>Node.js</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/MongoDB.svg" />
+                  <Image layout="fill" src="/MongoDB.svg" alt="MongoDB" />
                 </Skill.ImageContainer>
                 <Skill.Title>MongoDB</Skill.Title>
               </Skill>
@@ -318,25 +319,25 @@ export default function Home() {
             <SkillContainer>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/Javascript.svg" />
+                  <Image layout="fill" src="/Javascript.svg" alt="Javascript" />
                 </Skill.ImageContainer>
                 <Skill.Title>Javascript</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/TypeScript.svg" />
+                  <Image layout="fill" src="/TypeScript.svg" alt="Typescript" />
                 </Skill.ImageContainer>
                 <Skill.Title>Typescript</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/Html5.svg" />
+                  <Image layout="fill" src="/Html5.svg" alt="HTML5" />
                 </Skill.ImageContainer>
                 <Skill.Title>HTML</Skill.Title>
               </Skill>
               <Skill>
                 <Skill.ImageContainer>
-                  <Image layout="fill" src="/Css3.svg" />
+                  <Image layout="fill" src="/Css3.svg" alt="CSS3" />
                 </Skill.ImageContainer>
                 <Skill.Title>CSS</Skill.Title>
               </Skill>
@@ -349,31 +350,43 @@ export default function Home() {
             <ContactContainer>
               <Contact>
                 <Contact.ImageContainer>
-                  <Image layout="fill" src="/Contact.svg" />
+                  <Image
+                    layout="fill"
+                    src="/Contact.svg"
+                    alt="Contact Picture"
+                  />
                 </Contact.ImageContainer>
                 <Contact.Text>+421 915498774</Contact.Text>
               </Contact>
               <Contact>
                 <Contact.ImageContainer>
-                  <Image layout="fill" src="/Mail.svg" />
+                  <Image layout="fill" src="/Mail.svg" alt="Mail Picture" />
                 </Contact.ImageContainer>
                 <Contact.Text>fodormarek5@gmail.com</Contact.Text>
               </Contact>
               <Contact>
                 <Contact.ImageContainer>
-                  <Image layout="fill" src="/LinkedIn.svg" />
+                  <Image
+                    layout="fill"
+                    src="/LinkedIn.svg"
+                    alt="LinkedIn Logo"
+                  />
                 </Contact.ImageContainer>
                 <Contact.Text>Marek Fodor</Contact.Text>
               </Contact>
               <Contact>
                 <Contact.ImageContainer>
-                  <Image layout="fill" src="/Instagram.svg" />
+                  <Image
+                    layout="fill"
+                    src="/Instagram.svg"
+                    alt="Instagram Logo"
+                  />
                 </Contact.ImageContainer>
                 <Contact.Text>Marek Fodor</Contact.Text>
               </Contact>
               <Contact href="github.com">
                 <Contact.ImageContainer>
-                  <Image layout="fill" src="/Github.svg" />
+                  <Image layout="fill" src="/Github.svg" alt="GitHub Logo" />
                 </Contact.ImageContainer>
                 <Contact.Text>Marek Fodor</Contact.Text>
               </Contact>

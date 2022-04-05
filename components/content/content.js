@@ -1,5 +1,4 @@
-import styled, { keyframes } from "styled-components";
-import { glowAnimation } from "../decorations/animations";
+import styled from "styled-components";
 import { SmallTriangleBackground } from "../decorations/decorations";
 
 export const PrimaryColorText = styled.span`
@@ -35,21 +34,27 @@ Section.Header = ({ children, id, ...restProps }) => {
   );
 };
 
+Section.Header.displayName = "Header";
+
 Section.Content = ({ children, ...restProps }) => {
   return <Content {...restProps}>{children}</Content>;
 };
 
-Section.Article = ({ children, title, ...restProps }) => {
+Section.Content.displayName = "Content";
+
+Section.Article = ({ children, ...restProps }) => {
   return (
     <Article {...restProps}>
       <ArticleContent>{children}</ArticleContent>
     </Article>
   );
 };
+Section.Article.displayName = "Article";
 
 Section.ArticleHeading = ({ children, ...restProps }) => {
   return <ArticleHeading {...restProps}>{children}</ArticleHeading>;
 };
+Section.ArticleHeading.displayName = "ArticleHeading";
 
 const Content = styled.div`
   display: flex;

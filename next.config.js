@@ -4,6 +4,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  extends: ["plugin:@next/next/recommended"],
 };
 
 module.exports = nextConfig;

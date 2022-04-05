@@ -1,6 +1,19 @@
 {
+  "presets": [
+    "@babel/preset-react"
+  ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "requireConfigFile": false
-  }
+    "requireConfigFile": false,
+    "sourceType": "module",
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "next"
+  ]
 }

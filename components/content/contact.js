@@ -8,10 +8,13 @@ export const Contact = ({ children, ...restProps }) => {
 Contact.ImageContainer = (props) => {
   return <ImageContainer {...props} />;
 };
+Contact.ImageContainer.displayName = "Image Container";
 
 Contact.Text = ({ children, ...restProps }) => {
   return <Text {...restProps}>{children}</Text>;
 };
+
+Contact.Text.displayName = "Text";
 
 const ImageContainer = styled(ImgContainer)`
   width: 30px;
