@@ -2,7 +2,8 @@ import Image from "next/Image";
 import styled, { css } from "styled-components";
 import { Text, Title } from "./content";
 
-export const ExperienceItemLeft = (props) => {
+export const ExperienceItemLeft = () => {
+  //TODO: Sprav z toho compound component
   return (
     <Container>
       <Circle></Circle>
@@ -20,6 +21,7 @@ export const ExperienceItemLeft = (props) => {
             width="200"
             height="150"
             src="/handlova.png"
+            alt={"Handlova"}
           ></Image>
           <figcaption></figcaption>
         </ImageContainer>
@@ -35,22 +37,27 @@ export const ExperienceItem = ({ children, ...restProps }) => {
 ExperienceItem.Circle = (props) => {
   return <Circle {...props} />;
 };
+ExperienceItem.Circle.displayName = "Circle";
 
 ExperienceItem.Content = ({ children, ...restProps }) => {
   return <Content {...restProps}>{children}</Content>;
 };
+ExperienceItem.Content.displayName = "Content";
 
 ExperienceItem.Heading = ({ children, ...restProps }) => {
   return <Heading {...restProps}>{children}</Heading>;
 };
+ExperienceItem.Heading.displayName = "Heading";
 
 ExperienceItem.Timestamp = ({ children, ...restProps }) => {
   return <Timestamp {...restProps}>{children}</Timestamp>;
 };
+ExperienceItem.Timestamp.displayName = "Timestamp";
 
 ExperienceItem.PictureContainer = ({ children, ...restProps }) => {
   return <ImageContainer {...restProps}>{children}</ImageContainer>;
 };
+ExperienceItem.PictureContainer.displayName = "PictureContainer";
 
 const Heading = styled.div``;
 

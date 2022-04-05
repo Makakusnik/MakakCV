@@ -8,10 +8,13 @@ export const Skill = ({ children, ...restProps }) => {
 Skill.ImageContainer = ({ children, ...restProps }) => {
   return <ImageContainer {...restProps}>{children}</ImageContainer>;
 };
+Skill.ImageContainer.displayName = "ImageContainer";
 
 Skill.Title = ({ children, ...restProps }) => {
   return <Text {...restProps}>{children}</Text>;
 };
+Skill.Title.displayName = "Title";
+
 const ImageContainer = styled(ImgContainer)`
   width: 40px;
   height: 40px;

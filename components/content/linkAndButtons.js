@@ -6,7 +6,7 @@ export const IntraPageLink = (props) => {
   return (
     <Container as={props.as}>
       <A href={props.href}>
-        <Image width="32" height="32" src={props.src}></Image>
+        <Image alt={props.alt} width="32" height="32" src={props.src}></Image>
         <Text>{props.children}</Text>
       </A>
     </Container>

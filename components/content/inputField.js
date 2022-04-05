@@ -13,17 +13,23 @@ Field.Label = ({ children, ...restProps }) => {
   );
 };
 
-Field.Input = ({ children, ...restProps }) => {
-  return <Input id="email" {...restProps}></Input>;
+Field.Label.displayName = "Label";
+
+Field.Input = (props) => {
+  return <Input id="email" {...props}></Input>;
 };
+
+Field.Input.displayName = "Input";
 
 Field.FakeInput = ({ children, ...restProps }) => {
   return <FakeInput {...restProps}>{children}</FakeInput>;
 };
+Field.FakeInput.displayName = "FakeInput";
 
 Field.Button = ({ children, ...restProps }) => {
   return <Button type="submit" {...restProps} value={children} />;
 };
+Field.Button.displayName = "Button";
 
 const Button = styled.input`
   display: flex;
@@ -37,7 +43,7 @@ const Button = styled.input`
 
 const Container = styled.div`
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   row-gap: 4px;
   width: 100%;
 `;
