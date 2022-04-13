@@ -2,13 +2,13 @@ import styled, { keyframes } from "styled-components";
 
 export const BigCircle = styled.div`
   border-radius: 50%;
-  min-width: ${({ diameter }) => diameter + "px"};
-  min-height: ${({ diameter }) => diameter + "px"};
-  border: 1px solid ${({ theme }) => theme.lightDark};
+  min-width: 90px;
+  min-height: 90px;
+  border: 1px solid blue;
   position: relative;
 `;
 
-export const rotate = keyframes`
+const rotate = keyframes`
   from {
     transform: translate(35px, -10px) rotate(0deg);
   }
@@ -19,10 +19,10 @@ export const rotate = keyframes`
 
 export const FilledCircle = styled.div`
   border-radius: 50%;
-  min-width: ${({ diameter }) => diameter + "px"};
-  min-height: ${({ diameter }) => diameter + "px"};
+  min-width: 20px;
+  min-height: 20px;
   animation: ${rotate} 3s linear infinite;
   transform-origin: 10px 55px;
-  background-color: ${({ theme }) => theme.balls};
+  background-color: red;
   position: absolute;
 `;

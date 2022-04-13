@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { BigCircle, rotate } from "../components/decorations/decorations";
+import styled, { keyframes } from "styled-components";
+import {} from "../components/decorations/decorations";
 import Image from "next/image";
 import { Column } from "../components/layouts/layoutElements";
 import {
@@ -16,14 +16,31 @@ import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
 import { Field } from "../components/content/inputField";
 
-const Square = styled.div`
+const rotate = keyframes`
+  from {
+    transform: translate(35px, -10px) rotate(0deg);
+  }
+  to {
+    transform: translate(35px, -10px) rotate(359deg);
+  }
+`;
+
+export const FilledCircle = styled.div`
   border-radius: 50%;
-  min-width: ${({ diameter }) => diameter + "px"};
-  min-height: ${({ diameter }) => diameter + "px"};
+  min-width: 20px;
+  min-height: 20px;
   animation: ${rotate} 3s linear infinite;
   transform-origin: 10px 55px;
-  background-color: ${({ theme }) => theme.balls};
+  background-color: red;
   position: absolute;
+`;
+
+export const BigCircle = styled.div`
+  border-radius: 50%;
+  min-width: 90px;
+  min-height: 90px;
+  border: 1px solid blue;
+  position: relative;
 `;
 
 export default function Home() {
@@ -32,8 +49,8 @@ export default function Home() {
       <Header>
         <Content>
           <Column alignItems="center" rowGap="25px">
-            <BigCircle diameter={90}>
-              <Square diameter={20}></Square>
+            <BigCircle>
+              <FilledCircle></FilledCircle>
             </BigCircle>
             <PhotoContainer>
               <Image
