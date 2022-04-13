@@ -1,5 +1,9 @@
 import styled, { keyframes } from "styled-components";
-import {} from "../components/decorations/decorations";
+import {
+  Animated,
+  BigCircle,
+  FilledCircle,
+} from "../components/decorations/decorations";
 import Image from "next/image";
 import { Column } from "../components/layouts/layoutElements";
 import {
@@ -16,42 +20,12 @@ import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
 import { Field } from "../components/content/inputField";
 
-const rotate = keyframes`
-  from {
-    transform: translate(35px, -10px) rotate(0deg);
-  }
-  to {
-    transform: translate(35px, -10px) rotate(359deg);
-  }
-`;
-
-export const FilledCircle = styled.div`
-  border-radius: 50%;
-  min-width: 20px;
-  min-height: 20px;
-  animation: ${rotate} 3s linear infinite;
-  transform-origin: 10px 55px;
-  background-color: red;
-  position: absolute;
-`;
-
-export const BigCircle = styled.div`
-  border-radius: 50%;
-  min-width: 90px;
-  min-height: 90px;
-  border: 1px solid blue;
-  position: relative;
-`;
-
 export default function Home() {
   return (
     <>
       <Header>
         <Content>
           <Column alignItems="center" rowGap="25px">
-            <BigCircle>
-              <FilledCircle></FilledCircle>
-            </BigCircle>
             <PhotoContainer>
               <Image
                 layout="responsive"
@@ -93,6 +67,68 @@ export default function Home() {
               </Ul>
             </SecondaryNav>
           </Column>
+          <Animated>
+            <BigCircle top={"20%"} left={"25%"} diameter={90}>
+              <FilledCircle diameter={20} parentDiameter={90}></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"40%"} left={"65%"} diameter={90}>
+              <FilledCircle
+                diameter={30}
+                parentDiameter={90}
+                delay="0.40s"
+                speed="4s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={10}
+                parentDiameter={90}
+                delay="0.00s"
+                speed="1.6s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={5}
+                parentDiameter={90}
+                speed="2s"
+                delay="0.10s"
+              ></FilledCircle>
+            </BigCircle>
+
+            <BigCircle top={"70%"} left={"15%"} diameter={80}>
+              <FilledCircle
+                diameter={10}
+                parentDiameter={80}
+                delay="0.15s"
+                speed="3s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={15}
+                parentDiameter={80}
+                delay="0.30s"
+                speed="2s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={10}
+                parentDiameter={80}
+                speed="3.5s"
+              ></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"20%"} left={"75%"} diameter={50}>
+              <FilledCircle
+                diameter={10}
+                speed="1.5s"
+                parentDiameter={50}
+              ></FilledCircle>
+              <FilledCircle
+                diameter={15}
+                speed="2s"
+                parentDiameter={50}
+              ></FilledCircle>
+              <FilledCircle
+                diameter={5}
+                speed="1s"
+                parentDiameter={50}
+              ></FilledCircle>
+            </BigCircle>
+          </Animated>
         </Content>
       </Header>
       <Main>
@@ -552,7 +588,6 @@ const Header = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6));
 `;
 
 const Content = styled.div`

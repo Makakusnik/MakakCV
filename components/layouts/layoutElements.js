@@ -9,6 +9,7 @@ export const Column = styled.div`
   flex-direction: column;
   height: ${({ height }) => height || "fit-content"};
   width: ${({ width }) => width || "fit-content"};
+  z-index: 1;
 `;
 
 export const Row = styled.div`

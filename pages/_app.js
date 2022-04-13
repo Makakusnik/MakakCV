@@ -4,7 +4,7 @@ const theme = {
   primary: "#05E9B2",
   lightDark: "#292929",
   mediumDark: "#1E1E1E",
-  balls: "#56077B",
+  balls: "#40085A",
   dark: "#171717",
   light: "#EDEDED",
   text: "#FFFFFF",

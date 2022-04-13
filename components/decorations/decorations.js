@@ -1,28 +1,46 @@
 import styled, { keyframes } from "styled-components";
+export const Animated = styled.div`
+  z-index: 0;
+`;
+
+export const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  35%{ 
+         opacity: 0;
+  }
+  55%{ 
+         opacity: 0;
+  }
+  to {
+    transform: rotate(359deg);
+    opacity: 1;
+  }
+`;
 
 export const BigCircle = styled.div`
   border-radius: 50%;
-  min-width: 90px;
-  min-height: 90px;
-  border: 1px solid blue;
-  position: relative;
-`;
-
-const rotate = keyframes`
-  from {
-    transform: translate(35px, -10px) rotate(0deg);
-  }
-  to {
-    transform: translate(35px, -10px) rotate(359deg);
-  }
+  min-width: ${({ diameter }) => diameter + "px"};
+  min-height: ${({ diameter }) => diameter + "px"};
+  position: absolute;
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
 `;
 
 export const FilledCircle = styled.div`
+  left: ${({ parentDiameter, diameter }) =>
+    `${parentDiameter / 2 - diameter / 2}px`};
+  top: ${({ diameter }) => `-${diameter / 2}px`};
   border-radius: 50%;
-  min-width: 20px;
-  min-height: 20px;
+  min-width: ${({ diameter }) => diameter + "px"};
+  min-height: ${({ diameter }) => diameter + "px"};
   animation: ${rotate} 3s linear infinite;
-  transform-origin: 10px 55px;
-  background-color: red;
+  transform-origin: ${({ parentDiameter, diameter }) =>
+    `${diameter / 2}px ${parentDiameter / 2 + diameter / 2}px`};
+  background-color: ${({ theme }) => theme.balls};
   position: absolute;
+  animation-delay: ${({ delay }) => delay};
+  animation-duration: ${({ speed }) => speed};
 `;
