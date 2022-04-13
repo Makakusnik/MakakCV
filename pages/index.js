@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BigTriangleBackground } from "../components/decorations/decorations";
+import { BigCircle, rotate } from "../components/decorations/decorations";
 import Image from "next/image";
 import { Column } from "../components/layouts/layoutElements";
 import {
@@ -16,12 +16,25 @@ import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
 import { Field } from "../components/content/inputField";
 
+const Square = styled.div`
+  border-radius: 50%;
+  min-width: ${({ diameter }) => diameter + "px"};
+  min-height: ${({ diameter }) => diameter + "px"};
+  animation: ${rotate} 3s linear infinite;
+  transform-origin: 10px 55px;
+  background-color: ${({ theme }) => theme.balls};
+  position: absolute;
+`;
+
 export default function Home() {
   return (
     <>
       <Header>
         <Content>
           <Column alignItems="center" rowGap="25px">
+            <BigCircle diameter={90}>
+              <Square diameter={20}></Square>
+            </BigCircle>
             <PhotoContainer>
               <Image
                 layout="responsive"
@@ -33,21 +46,37 @@ export default function Home() {
               />
               <figcaption aria-hidden="true">
                 {/* TODO uprav domenu*/}
-                Marek Fodor, author of www.web.sk
+                Marek Fodor, author of www.marekus.sk
               </figcaption>
             </PhotoContainer>
-            <Title fontSize="32px" as="h1" fontFamily="lato">
+            <Title fontSize="28px" as="h1" fontFamily="lato">
               <PrimaryColorText>Marek Fodor</PrimaryColorText>
             </Title>
             <Text fontSize="20px" textAlign="center">
               Junior Front-end <br></br>Developer
             </Text>
+            <SecondaryNav aria-label="Secondary Navigation">
+              {/* TU BUDU INTRA-page linky*/}
+              <Ul>
+                <IntraPageLink as="li" href="#AboutMe" src="/Avatar.svg">
+                  About Me
+                </IntraPageLink>
+                <IntraPageLink as="li" href="#Experience" src="/Experience.svg">
+                  Experience
+                </IntraPageLink>
+                <IntraPageLink as="li" href="#Skills" src="/Skills.svg">
+                  Skills
+                </IntraPageLink>
+                <IntraPageLink as="li" href="#Contact" src="/Contact.svg">
+                  Contact
+                </IntraPageLink>
+                <IntraPageLink as="li" href="#ContactMe" src="/Dialog.svg">
+                  Contact Me
+                </IntraPageLink>
+              </Ul>
+            </SecondaryNav>
           </Column>
         </Content>
-        <BigTriangleBackground
-          glow={true}
-          color="mediumDark"
-        ></BigTriangleBackground>
       </Header>
       <Main>
         <SecondaryNav aria-label="Secondary Navigation">
@@ -497,28 +526,32 @@ const Ul = styled.ul`
 
 const Header = styled.header`
   display: flex;
-  position: relative;
+  background: url("gradientBG.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 100px;
+  background-position-y: 100%;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  overflow-x: hidden;
-  bottom: 40px;
-  background-color: ${({ theme }) => theme.mediumDark};
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6));
 `;
 
 const Content = styled.div`
   display: flex;
   width: 100%;
   z-index: 2;
-  top: 50px;
   position: relative;
   justify-content: center;
+  padding-bottom: 80px;
 `;
 
 const PhotoContainer = styled(ImageContainer)`
-  width: 150px;
+  width: 130px;
   border-radius: 50%;
-  height: 150px;
+  height: 130px;
+  margin-bottom: 70px;
   & > span {
     position: relative;
     top: 10px;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { SmallTriangleBackground } from "../decorations/decorations";
 
 export const PrimaryColorText = styled.span`
   color: ${({ theme }) => theme.primary};
@@ -29,7 +28,6 @@ Section.Header = ({ children, id, ...restProps }) => {
   return (
     <Header {...restProps}>
       <LinkTitle id={id}>{children}</LinkTitle>
-      <SmallTriangleBackground />
     </Header>
   );
 };
@@ -94,7 +92,7 @@ const ArticleHeading = styled.h3`
     margin-top: 0px;
   }
 `;
-const ArticleContent = styled.p`
+const ArticleContent = styled.div`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.text};

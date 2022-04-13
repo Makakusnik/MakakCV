@@ -1,55 +1,28 @@
-import styled, { css } from "styled-components";
-import { glowAnimation } from "./animations";
+import styled, { css, keyframes } from "styled-components";
 
-export const BigTriangleBackground = (props) => {
-  return (
-    <SVGContainer aria-hidden="true" color={props.color}>
-      <Svg glow={props.glow} viewBox="0 0 1 0.6">
-        <path d="M1 0.15 L0.5 0.55 0 0.15 V 0 l 0.5 0.4 L1 0z"></path>
-        <clipPath id="triangle" clipPathUnits="objectBoundingBox">
-          <path d="M1 0.1 L0.5 0.92 0 0.1 V 0 l 1 0z"></path>
-        </clipPath>
-      </Svg>
-    </SVGContainer>
-  );
-};
-
-export const SmallTriangleBackground = (props) => {
-  return (
-    <SVGContainer aria-hidden="true" color={props.color}>
-      <Svg glow={props.glow} viewBox="0 0 1 0.5">
-        <path d="M1 0.075 L0.5 0.5 0 0.075 V 0 l 0.5 0.425 L1 0z"></path>
-        <clipPath id="triangle" clipPathUnits="objectBoundingBox">
-          <path d="M1 0.1 L0.5 0.6 0 0.1 V 0 l 1 0z"></path>
-        </clipPath>
-      </Svg>
-    </SVGContainer>
-  );
-};
-
-const Svg = styled.svg`
-  ${({ glow }) =>
-    glow &&
-    css`
-      animation: ${glowAnimation} 2s ease-in-out infinite;
-    `};
-  fill: ${({ theme }) => theme.primary};
+export const BigCircle = styled.div`
+  border-radius: 50%;
+  min-width: ${({ diameter }) => diameter + "px"};
+  min-height: ${({ diameter }) => diameter + "px"};
+  border: 1px solid ${({ theme }) => theme.lightDark};
+  position: relative;
 `;
 
-const SVGContainer = styled.div`
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  background-color: ${({ theme }) => theme.dark};
-
-  &::before {
-    display: flex;
-    content: "";
-    position: absolute;
-    clip-path: url("#triangle");
-    width: 100%;
-    height: calc(100% - 24px);
-    top: -1px;
-    background-color: ${({ theme, color }) => theme[color]};
+export const rotate = keyframes`
+  from {
+    transform: translate(35px, -10px) rotate(0deg);
   }
+  to {
+    transform: translate(35px, -10px) rotate(359deg);
+  }
+`;
+
+export const FilledCircle = styled.div`
+  border-radius: 50%;
+  min-width: ${({ diameter }) => diameter + "px"};
+  min-height: ${({ diameter }) => diameter + "px"};
+  animation: ${rotate} 3s linear infinite;
+  transform-origin: 10px 55px;
+  background-color: ${({ theme }) => theme.balls};
+  position: absolute;
 `;

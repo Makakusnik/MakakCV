@@ -1,9 +1,10 @@
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const theme = {
-  primary: "#00D254",
-  lightDark: "#373737",
+  primary: "#05E9B2",
+  lightDark: "#292929",
   mediumDark: "#1E1E1E",
+  balls: "#56077B",
   dark: "#171717",
   light: "#EDEDED",
   text: "#FFFFFF",

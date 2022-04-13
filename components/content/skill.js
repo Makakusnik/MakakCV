@@ -19,6 +19,7 @@ const ImageContainer = styled(ImgContainer)`
   width: 40px;
   height: 40px;
   background-color: transparent;
+  fill: ${({ theme }) => theme.primary};
 `;
 
 const Container = styled.div`
