@@ -20,7 +20,7 @@ import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
 import { Field } from "../components/content/inputField";
 import { devices } from "./_app";
-import { Animate, popRight, popUp } from "../components/decorations/animations";
+import { Animate } from "../components/decorations/animations";
 
 export default function Home() {
   return (
@@ -704,13 +704,6 @@ const SkillContainer = styled.div`
   @media (max-width: ${devices.mobileS}) {
     grid-template-columns: ${({ templateMobileS }) => templateMobileS};
   }
-`;
-
-const Heading = styled.div`
-  display: flex;
-  margin-top: ${({ marginTop }) => marginTop};
-  margin-bottom: ${({ marginBottom }) => marginBottom};
-  justify-content: center;
 `;
 
 const SecondaryNav = styled.nav`

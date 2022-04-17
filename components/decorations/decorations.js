@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { rotate } from "./animations";
 export const Animated = styled.div`
   z-index: 0;

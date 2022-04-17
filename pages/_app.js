@@ -62,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
     
 `;
 
-const inViewport = (entries, observer) => {
+const inViewport = (entries) => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
   });
