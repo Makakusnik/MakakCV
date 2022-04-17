@@ -1,23 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { rotate } from "./animations";
 export const Animated = styled.div`
   z-index: 0;
-`;
-
-export const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  35%{ 
-         opacity: 0;
-  }
-  55%{ 
-         opacity: 0;
-  }
-  to {
-    transform: rotate(359deg);
-    opacity: 1;
-  }
 `;
 
 export const BigCircle = styled.div`

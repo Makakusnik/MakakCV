@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import {
   Animated,
   BigCircle,
@@ -19,6 +19,8 @@ import { ExperienceItem } from "../components/content/timeline";
 import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
 import { Field } from "../components/content/inputField";
+import { devices } from "./_app";
+import { Animate, popRight, popUp } from "../components/decorations/animations";
 
 export default function Home() {
   return (
@@ -49,46 +51,161 @@ export default function Home() {
             <SecondaryNav aria-label="Secondary Navigation">
               {/* TU BUDU INTRA-page linky*/}
               <Ul>
-                <IntraPageLink as="li" href="#AboutMe" src="/Avatar.svg">
+                <IntraPageLink
+                  delay="0.5s"
+                  as="li"
+                  href="#AboutMe"
+                  src="/Avatar.svg"
+                >
                   About Me
                 </IntraPageLink>
-                <IntraPageLink as="li" href="#Experience" src="/Experience.svg">
+                <IntraPageLink
+                  delay="0.7s"
+                  as="li"
+                  href="#Experience"
+                  src="/Experience.svg"
+                >
                   Experience
                 </IntraPageLink>
-                <IntraPageLink as="li" href="#Skills" src="/Skills.svg">
+                <IntraPageLink
+                  delay="0.9s"
+                  as="li"
+                  href="#Skills"
+                  src="/Skills.svg"
+                >
                   Skills
                 </IntraPageLink>
-                <IntraPageLink as="li" href="#Contact" src="/Contact.svg">
+                <IntraPageLink
+                  delay="1.1s"
+                  as="li"
+                  href="#Contact"
+                  src="/Contact.svg"
+                >
                   Contact
                 </IntraPageLink>
-                <IntraPageLink as="li" href="#ContactMe" src="/Dialog.svg">
+                <IntraPageLink
+                  delay="1.3s"
+                  as="li"
+                  href="#ContactMe"
+                  src="/Dialog.svg"
+                >
                   Contact Me
                 </IntraPageLink>
               </Ul>
             </SecondaryNav>
           </Column>
-          <Animated>
+          <Animated aria-hidden="true">
+            <BigCircle top={"-60px"} left={"5%"} diameter={130}>
+              <FilledCircle
+                diameter={19}
+                parentDiameter={130}
+                delay="0.34s"
+                speed="3s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={14}
+                parentDiameter={130}
+                delay="0.99s"
+                speed="4s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={8}
+                parentDiameter={130}
+                delay="0.29s"
+                speed="2s"
+              ></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"-80px"} left={"50%"} diameter={100}>
+              <FilledCircle
+                diameter={26}
+                parentDiameter={100}
+                delay="0.12s"
+                speed="5s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={5}
+                parentDiameter={100}
+                delay="0.03s"
+                speed="3s"
+              ></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"5%"} left={"30%"} diameter={80}>
+              <FilledCircle
+                diameter={22}
+                parentDiameter={80}
+                delay="0.42s"
+                speed="3s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={15}
+                parentDiameter={80}
+                delay="0.08s"
+                speed="1s"
+              ></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"49%"} left={"30%"} diameter={60}>
+              <FilledCircle
+                diameter={30}
+                parentDiameter={60}
+                delay="0.32s"
+                speed="7s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={10}
+                parentDiameter={60}
+                delay="0.63s"
+                speed="2s"
+              ></FilledCircle>
+            </BigCircle>
             <BigCircle top={"20%"} left={"25%"} diameter={90}>
               <FilledCircle diameter={20} parentDiameter={90}></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"10%"} left={"40%"} diameter={120}>
+              <FilledCircle
+                diameter={30}
+                parentDiameter={120}
+                delay="0.92s"
+                speed="4s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={10}
+                parentDiameter={120}
+                delay="0.63s"
+                speed="2s"
+              ></FilledCircle>
+            </BigCircle>
+            <BigCircle top={"0"} left={"60%"} diameter={110}>
+              <FilledCircle
+                diameter={20}
+                parentDiameter={110}
+                delay="0.22s"
+                speed="4s"
+              ></FilledCircle>
+              <FilledCircle
+                diameter={10}
+                parentDiameter={110}
+                delay="0.43s"
+                speed="2s"
+              ></FilledCircle>
             </BigCircle>
             <BigCircle top={"40%"} left={"65%"} diameter={90}>
               <FilledCircle
                 diameter={30}
                 parentDiameter={90}
-                delay="0.40s"
+                delay="0.63s"
                 speed="4s"
               ></FilledCircle>
               <FilledCircle
                 diameter={10}
                 parentDiameter={90}
-                delay="0.00s"
+                delay="1.15s"
                 speed="1.6s"
               ></FilledCircle>
               <FilledCircle
                 diameter={5}
                 parentDiameter={90}
                 speed="2s"
-                delay="0.10s"
+                delay="0.660s"
               ></FilledCircle>
             </BigCircle>
 
@@ -96,7 +213,7 @@ export default function Home() {
               <FilledCircle
                 diameter={10}
                 parentDiameter={80}
-                delay="0.15s"
+                delay="0.86s"
                 speed="3s"
               ></FilledCircle>
               <FilledCircle
@@ -132,305 +249,324 @@ export default function Home() {
         </Content>
       </Header>
       <Main>
-        <SecondaryNav aria-label="Secondary Navigation">
-          {/* TU BUDU INTRA-page linky*/}
-          <Ul>
-            <IntraPageLink as="li" href="#AboutMe" src="/Avatar.svg">
-              About Me
-            </IntraPageLink>
-            <IntraPageLink as="li" href="#Experience" src="/Experience.svg">
-              Experience
-            </IntraPageLink>
-            <IntraPageLink as="li" href="#Skills" src="/Skills.svg">
-              Skills
-            </IntraPageLink>
-            <IntraPageLink as="li" href="#Contact" src="/Contact.svg">
-              Contact
-            </IntraPageLink>
-            <IntraPageLink as="li" href="#ContactMe" src="/Dialog.svg">
-              Contact Me
-            </IntraPageLink>
-          </Ul>
-        </SecondaryNav>
+        {/* About me */}
+
         <Section>
           <Section.Header id="AboutMe">About Me</Section.Header>
           <Section.Content>
             <Section.Article title="Me">
-              <Section.ArticleHeading>Me</Section.ArticleHeading>
-              <p>
-                I am self-taught junior frontend, soon fullstack developer. I
-                have big passion for learning new technologies related to web,
-                games, graphics or computers in general.
-              </p>
-              <Section.ArticleHeading>Coding</Section.ArticleHeading>
-              <p>
-                Web related “career” started for me in november 2020 when I
-                started learning basics of HTML, CSS and javascript. Later I
-                discovered mongodb, node.js, express.js and react.js a.k.a. MERN
-                stack.
-              </p>
-              <Section.ArticleHeading>Career</Section.ArticleHeading>
-              <p>
-                I have experience as frontend developer in company{" "}
-                <InlineLink
-                  title="Company website of Brain:IT"
-                  target="_blank"
-                  href="https://brainit.sk/en/home/"
-                >
-                  Brain:IT
-                </InlineLink>
-                , where I was using mostly wordpress.
-                <br></br>Currently I am working in{" "}
-                <InlineLink
-                  title="Company website of Syncreon"
-                  target="_blank"
-                  href="https://www.syncreon.com/"
-                >
-                  Syncreon
-                </InlineLink>{" "}
-                in Netherlands, as warehouse worker.
-              </p>
+              <Section.ArticleContent>
+                <Animate data-inviewport="popRight">
+                  <Section.ArticleHeading>Me</Section.ArticleHeading>
+                  <p>
+                    I am self-taught junior frontend, soon fullstack developer.
+                    I have big passion for learning new technologies related to
+                    web, games, graphics or computers in general.
+                  </p>
+                </Animate>
+                <Animate data-inviewport="popRight">
+                  <Section.ArticleHeading>Coding</Section.ArticleHeading>
+                  <p>
+                    Web related “career” started for me in november 2020 when I
+                    started learning basics of HTML, CSS and javascript. Later I
+                    discovered mongodb, node.js, express.js and react.js a.k.a.
+                    MERN stack.
+                  </p>
+                </Animate>
+                <Animate data-inviewport="popRight">
+                  <Section.ArticleHeading>Career</Section.ArticleHeading>
+                  <p>
+                    I have experience as frontend developer in company{" "}
+                    <InlineLink
+                      title="Company website of Brain:IT"
+                      target="_blank"
+                      href="https://brainit.sk/en/home/"
+                    >
+                      Brain:IT
+                    </InlineLink>
+                    , where I was using mostly wordpress.
+                    <br></br>Currently I am working in{" "}
+                    <InlineLink
+                      title="Company website of Syncreon"
+                      target="_blank"
+                      href="https://www.syncreon.com/"
+                    >
+                      Syncreon
+                    </InlineLink>{" "}
+                    in Netherlands, as warehouse worker.
+                  </p>
+                </Animate>
+              </Section.ArticleContent>
             </Section.Article>
           </Section.Content>
         </Section>
+
+        {/* Experience */}
+
         <Section>
           <Section.Header id="Experience">Experience</Section.Header>
           <Section.Content>
-            <>
-              <Heading>
-                <Title as="h3" fontSize="22px">
+            <Section.Article
+              template="1fr 1fr"
+              templateTablet="1fr"
+              templateMobileL="1fr"
+            >
+              <Section.ArticleContent>
+                <Section.ArticleHeading center>
                   Education
-                </Title>
-              </Heading>
-              <ExperienceItem>
-                <ExperienceItem.Circle show />
-                <ExperienceItem.Content>
-                  <ExperienceItem.Timestamp left={true} dateTime="P182D">
-                    4 / 2021 - 9 / 2022
-                  </ExperienceItem.Timestamp>
-                  <Title fontSize="22px" as="h3">
-                    <abbr title="Stredná Odborná Škola">SOŠ</abbr> Handlová
-                  </Title>
-                  <Text>Techical Lyceum</Text>
-                  <Text fontSize="14px">Mechanical Engineer</Text>
-                  <ExperienceItem.PictureContainer
-                    top={60}
-                    right={-50}
-                    opacity={0.5}
-                  >
-                    <Image
-                      layout="fixed"
-                      width="110"
-                      height="110"
-                      src="/SosHandlova.svg"
-                      alt="Logo of Handlova High School"
-                    ></Image>
-                    <figcaption aria-hidden="false">
-                      School logo of Secondary Vocational School of Handlová
-                    </figcaption>
-                  </ExperienceItem.PictureContainer>
-                </ExperienceItem.Content>
-                <ExperienceItem.Circle show={false} />
-              </ExperienceItem>
-              <ExperienceItem>
-                <ExperienceItem.Circle show />
-                <ExperienceItem.Content>
-                  <ExperienceItem.Timestamp left={true} dateTime="P182D">
-                    4 / 2021 - 9 / 2022
-                  </ExperienceItem.Timestamp>
-                  <Title fontSize="22px" as="h4">
-                    University of Žilina
-                  </Title>
-                  <Text>Faculty of Informatics</Text>
-                  <Text fontSize="14px">Computer Science</Text>
-                  <ExperienceItem.PictureContainer
-                    top={60}
-                    right={-50}
-                    opacity={0.5}
-                  >
-                    <Image
-                      layout="fixed"
-                      width="110"
-                      height="110"
-                      src="/UniversityOfZilina.svg"
-                      alt="Logo of University of Zilina"
-                    ></Image>
-                    <figcaption aria-hidden="false">
-                      School logo of Secondary Vocational School of Handlová
-                    </figcaption>
-                  </ExperienceItem.PictureContainer>
-                </ExperienceItem.Content>
-                <ExperienceItem.Circle show={false} />
-              </ExperienceItem>
-            </>
-            <>
-              <Heading>
-                <Title as="h3" fontSize="22px">
-                  Work
-                </Title>
-              </Heading>
-              <ExperienceItem>
-                <ExperienceItem.Circle />
-                <ExperienceItem.Content>
-                  <ExperienceItem.Timestamp left={false} dateTime="P182D">
-                    4 / 2021 - 9 / 2022
-                  </ExperienceItem.Timestamp>
-                  <Title fontSize="22px" as="h3">
-                    Decathlon
-                  </Title>
-                  <Text>Sales assistant</Text>
-                  <ExperienceItem.PictureContainer
-                    top={70}
-                    right={-50}
-                    opacity={0.5}
-                  >
-                    <Image
-                      layout="fixed"
-                      width="260"
-                      height="110"
-                      src="/Decathlon.svg"
-                      alt="Decathlon Logo."
-                    ></Image>
-                    <figcaption aria-hidden="false">
-                      Decathlon company logo.
-                    </figcaption>
-                  </ExperienceItem.PictureContainer>
-                </ExperienceItem.Content>
-                <ExperienceItem.Circle show={true} />
-              </ExperienceItem>
-              <ExperienceItem>
-                <ExperienceItem.Circle />
-                <ExperienceItem.Content>
-                  <ExperienceItem.Timestamp left={false} dateTime="P182D">
-                    4 / 2021 - 9 / 2022
-                  </ExperienceItem.Timestamp>
-                  <Title fontSize="22px" as="h3">
-                    Brain:IT
-                  </Title>
-                  <Text>Junior front-end developer</Text>
-                  <ExperienceItem.PictureContainer
-                    top={70}
-                    right={-50}
-                    opacity={0.5}
-                  >
-                    <Image
-                      layout="fixed"
-                      width="260"
-                      height="110"
-                      src="/Brainit.svg"
-                      alt="Braint:IT company Logo."
-                    ></Image>
-                    <figcaption aria-hidden="false">
-                      Decathlon company logo.
-                    </figcaption>
-                  </ExperienceItem.PictureContainer>
-                </ExperienceItem.Content>
-                <ExperienceItem.Circle show={true} />
-              </ExperienceItem>
-            </>
+                </Section.ArticleHeading>
+                <Animate data-inviewport="popRight">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle show />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={true} dateTime="P182D">
+                        4 / 2021 - 9 / 2022
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h3">
+                        <abbr title="Stredná Odborná Škola">SOŠ</abbr> Handlová
+                      </Title>
+                      <Text>Techical Lyceum</Text>
+                      <Text fontSize="14px">Mechanical Engineer</Text>
+                      <ExperienceItem.PictureContainer
+                        top={80}
+                        right={-30}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="110"
+                          height="110"
+                          src="/SosHandlova.svg"
+                          alt="Logo of Handlova High School"
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          School logo of Secondary Vocational School of Handlová
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={false} />
+                  </ExperienceItem>
+                </Animate>
+                <Animate data-inviewport="popRight">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle show />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={true} dateTime="P182D">
+                        4 / 2021 - 9 / 2022
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h4">
+                        University of Žilina
+                      </Title>
+                      <Text>Faculty of Informatics</Text>
+                      <Text fontSize="14px">Computer Science</Text>
+                      <ExperienceItem.PictureContainer
+                        top={80}
+                        right={-30}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="110"
+                          height="110"
+                          src="/UniversityOfZilina.svg"
+                          alt="Logo of University of Zilina"
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          School logo of Secondary Vocational School of Handlová
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={false} />
+                  </ExperienceItem>
+                </Animate>
+              </Section.ArticleContent>
+              <Section.ArticleContent>
+                <Section.ArticleHeading center>Work</Section.ArticleHeading>
+                <Animate data-inviewport="popLeft">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={false} dateTime="P182D">
+                        4 / 2021 - 9 / 2022
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h3">
+                        Decathlon
+                      </Title>
+                      <Text>Sales assistant</Text>
+                      <ExperienceItem.PictureContainer
+                        top={70}
+                        right={-30}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="260"
+                          height="110"
+                          src="/Decathlon.svg"
+                          alt="Decathlon Logo."
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          Decathlon company logo.
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={true} />
+                  </ExperienceItem>
+                </Animate>
+                <Animate data-inviewport="popLeft">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={false} dateTime="P182D">
+                        4 / 2021 - 9 / 2022
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h3">
+                        Brain:IT
+                      </Title>
+                      <Text>Junior front-end developer</Text>
+                      <ExperienceItem.PictureContainer
+                        top={70}
+                        right={-30}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="260"
+                          height="110"
+                          src="/Brainit.svg"
+                          alt="Braint:IT company Logo."
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          Decathlon company logo.
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={true} />
+                  </ExperienceItem>
+                </Animate>
+              </Section.ArticleContent>
+            </Section.Article>
           </Section.Content>
         </Section>
+
+        {/* Skills */}
+
         <Section>
           <Section.Header id="Skills">Skills</Section.Header>
           <Section.Content>
-            <Heading>
-              <Title as="h3" fontSize="22px">
-                Frontend
-              </Title>
-            </Heading>
-            <SkillContainer>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/ReactJS.svg" alt="ReactJS" />
-                </Skill.ImageContainer>
-                <Skill.Title>React</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
-                </Skill.ImageContainer>
-                <Skill.Title>Next.js</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/ChakraJs.svg" alt="ChakraJS" />
-                </Skill.ImageContainer>
-                <Skill.Title>Chakra.js</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image
-                    layout="fill"
-                    src="/StyledComponents.svg"
-                    alt="Styled Components"
-                  />
-                </Skill.ImageContainer>
-                <Skill.Title>Styled Components</Skill.Title>
-              </Skill>
-            </SkillContainer>
-            <Heading>
-              <Title as="h3" fontSize="22px">
-                Backend
-              </Title>
-            </Heading>
-            <SkillContainer>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/ExpressJS.svg" alt="ExpressJS" />
-                </Skill.ImageContainer>
-                <Skill.Title>Express.js</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
-                </Skill.ImageContainer>
-                <Skill.Title>Node.js</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/MongoDB.svg" alt="MongoDB" />
-                </Skill.ImageContainer>
-                <Skill.Title>MongoDB</Skill.Title>
-              </Skill>
-            </SkillContainer>
-            <Heading>
-              <Title as="h3" fontSize="22px">
-                Programming Languages
-              </Title>
-            </Heading>
-            <SkillContainer>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/Javascript.svg" alt="Javascript" />
-                </Skill.ImageContainer>
-                <Skill.Title>Javascript</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/TypeScript.svg" alt="Typescript" />
-                </Skill.ImageContainer>
-                <Skill.Title>Typescript</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/Html5.svg" alt="HTML5" />
-                </Skill.ImageContainer>
-                <Skill.Title>HTML</Skill.Title>
-              </Skill>
-              <Skill>
-                <Skill.ImageContainer>
-                  <Image layout="fill" src="/Css3.svg" alt="CSS3" />
-                </Skill.ImageContainer>
-                <Skill.Title>CSS</Skill.Title>
-              </Skill>
-            </SkillContainer>
+            <Section.Article template="1fr 1fr" templateTablet="1fr">
+              <Section.ArticleContent>
+                <Section.ArticleHeading center>Frontend</Section.ArticleHeading>
+                <SkillContainer template="1fr 1fr" templateTablet="1fr 1fr">
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/ReactJS.svg" alt="ReactJS" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>React</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Next.js</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/ChakraJS.svg" alt="ChakraJS" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Chakra.js</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image
+                        layout="fill"
+                        src="/StyledComponents.svg"
+                        alt="Styled Components"
+                      />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Styled Components</Skill.Title>
+                  </Skill>
+                </SkillContainer>
+              </Section.ArticleContent>
+              <Section.ArticleContent>
+                <Section.ArticleHeading center>Backend</Section.ArticleHeading>
+                <SkillContainer template="1fr 1fr" templateMobileL="1fr 1fr">
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image
+                        layout="fill"
+                        src="/ExpressJS.svg"
+                        alt="ExpressJS"
+                      />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Express.js</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Node.js</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/MongoDB.svg" alt="MongoDB" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>MongoDB</Skill.Title>
+                  </Skill>
+                </SkillContainer>
+              </Section.ArticleContent>
+            </Section.Article>
+            <Section.Article>
+              <Section.ArticleContent>
+                <Section.ArticleHeading center>
+                  Programming Languages
+                </Section.ArticleHeading>
+                <SkillContainer template="1fr 1fr">
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image
+                        layout="fill"
+                        src="/JavaScript.svg"
+                        alt="Javascript"
+                      />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Javascript</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image
+                        layout="fill"
+                        src="/TypeScript.svg"
+                        alt="Typescript"
+                      />
+                    </Skill.ImageContainer>
+                    <Skill.Title>Typescript</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/Html5.svg" alt="HTML5" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>HTML</Skill.Title>
+                  </Skill>
+                  <Skill>
+                    <Skill.ImageContainer>
+                      <Image layout="fill" src="/Css3.svg" alt="CSS3" />
+                    </Skill.ImageContainer>
+                    <Skill.Title>CSS</Skill.Title>
+                  </Skill>
+                </SkillContainer>
+              </Section.ArticleContent>
+            </Section.Article>
           </Section.Content>
         </Section>
+
+        {/* Contact */}
+
         <Section>
           <Section.Header id="Contact">Contact</Section.Header>
           <Section.Content>
             <ContactContainer>
-              <Contact>
+              <Contact href="tel:+421915498774">
                 <Contact.ImageContainer>
                   <Image
                     layout="fill"
@@ -446,7 +582,10 @@ export default function Home() {
                 </Contact.ImageContainer>
                 <Contact.Text>fodormarek5@gmail.com</Contact.Text>
               </Contact>
-              <Contact>
+              <Contact
+                href="https://www.linkedin.com/in/marek-fodor/"
+                userSelect="none"
+              >
                 <Contact.ImageContainer>
                   <Image
                     layout="fill"
@@ -456,7 +595,10 @@ export default function Home() {
                 </Contact.ImageContainer>
                 <Contact.Text>Marek Fodor</Contact.Text>
               </Contact>
-              <Contact>
+              <Contact
+                href="https://www.instagram.com/marekus.s/"
+                userSelect="none"
+              >
                 <Contact.ImageContainer>
                   <Image
                     layout="fill"
@@ -466,7 +608,7 @@ export default function Home() {
                 </Contact.ImageContainer>
                 <Contact.Text>Marek Fodor</Contact.Text>
               </Contact>
-              <Contact href="github.com">
+              <Contact href="https://github.com/Makakusnik" userSelect="none">
                 <Contact.ImageContainer>
                   <Image layout="fill" src="/Github.svg" alt="GitHub Logo" />
                 </Contact.ImageContainer>
@@ -475,6 +617,9 @@ export default function Home() {
             </ContactContainer>
           </Section.Content>
         </Section>
+
+        {/* Contact Me */}
+
         <Section>
           <Section.Header id="ContactMe">Contact Me</Section.Header>
           <Section.Content>
@@ -541,16 +686,28 @@ const ContactContainer = styled.div`
 `;
 
 const SkillContainer = styled.div`
-  display: flex;
+  display: grid;
   max-width: 90%;
-  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  grid-template-columns: ${({ template }) => template || "1fr"};
   row-gap: 20px;
-  flex-wrap: wrap;
+  column-gap: 20px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  @media (max-width: ${devices.tablet}) {
+    grid-template-columns: ${({ templateTablet }) => templateTablet};
+  }
+  @media (max-width: ${devices.mobileL}) {
+    grid-template-columns: ${({ templateMobileL }) => templateMobileL};
+  }
+  @media (max-width: ${devices.mobileS}) {
+    grid-template-columns: ${({ templateMobileS }) => templateMobileS};
+  }
 `;
 
 const Heading = styled.div`
   display: flex;
-  margin: 60px 0 30px 0;
   margin-top: ${({ marginTop }) => marginTop};
   margin-bottom: ${({ marginBottom }) => marginBottom};
   justify-content: center;
@@ -559,12 +716,14 @@ const Heading = styled.div`
 const SecondaryNav = styled.nav`
   display: flex;
   justify-content: center;
+  padding-top: 50px;
 `;
 
 const Main = styled.main`
   display: flex;
   flex-direction: column;
-  row-gap: 50px;
+  width: 100%;
+  margin: auto;
 `;
 
 const Ul = styled.ul`
@@ -585,6 +744,8 @@ const Header = styled.header`
   height: 100vh;
   padding-top: 100px;
   background-position-y: 100%;
+  min-height: 840px;
+  max-height: 1300px;
   flex-direction: column;
   align-items: center;
   width: 100%;

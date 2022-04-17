@@ -1,13 +1,51 @@
-import { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const glowAnimation = (props) => keyframes`
-    0% { 
-      filter: drop-shadow(0px 0px 2px ${props.theme.primary});
-    }
-    50% {
-      filter: drop-shadow(0px 0px 6px ${props.theme.primary});
-    }
-    100% { 
-      filter: drop-shadow(0px 0px 2px ${props.theme.primary});
-    }
+export const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25%{ 
+         opacity: 0;
+  }
+  45%{
+    opacity: 0.3;
+
+  }
+  55% {
+    opacity: 0.3;
+  }
+  75%{ 
+         opacity: 0;
+  }
+  to {
+    transform: rotate(359deg);
+    opacity: 1;
+  }
+`;
+
+export const popUp = keyframes`
+  from {
+   top: 30px;
+    opacity: 0;
+  }
+  to {
+   top:0;
+    opacity: 1;
+  }
+`;
+
+export const popRight = keyframes`
+  from {
+   right: 30px;
+    opacity: 0;
+  }
+  to {
+   right:0;
+    opacity: 1;
+  }
+`;
+
+export const Animate = styled.div`
+  position: relative;
 `;

@@ -28,9 +28,8 @@ const Container = styled.div`
   flex-direction: column;
   row-gap: 10px;
   align-items: center;
-  padding: 5px;
+  padding: 5px 0;
   border-radius: 5px;
-  width: 50%;
   &:hover {
     transform: scale(1.2);
   }

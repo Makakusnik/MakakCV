@@ -1,63 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="50"
-   height="50"
-   viewBox="0 0 13.229166 13.229167"
-   version="1.1"
-   id="svg5"
-   sodipodi:docname="Mail.svg"
-   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#505050"
-     bordercolor="#ffffff"
-     borderopacity="1"
-     inkscape:pageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="1"
-     inkscape:document-units="px"
-     showgrid="false"
-     units="px"
-     width="50px"
-     inkscape:zoom="4.0718557"
-     inkscape:cx="22.102944"
-     inkscape:cy="15.594855"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs2">
-    <clipPath
-       id="clip0_82_23">
-      <rect
-         width="26"
-         height="30"
-         fill="white"
-         id="rect830" />
-    </clipPath>
-  </defs>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <g
-       style="fill:none;stroke-width:0.6"
-       id="g5939"
-       transform="matrix(0.44097222,0,0,0.44097222,0,1.8898746)">
-      <path
-         d="M 27.8571,0 H 2.14286 C 1.57454,0 1.02949,0.225765 0.627628,0.627628 0.225765,1.02949 0,1.57454 0,2.14286 V 19.2857 c 0,0.5683 0.225765,1.1134 0.627628,1.5152 0.401862,0.4019 0.946912,0.6277 1.515232,0.6277 H 27.8571 c 0.5684,0 1.1134,-0.2258 1.5153,-0.6277 C 29.7742,20.3991 30,19.854 30,19.2857 V 2.14286 C 30,1.57454 29.7742,1.02949 29.3724,0.627628 28.9705,0.225765 28.4255,0 27.8571,0 Z M 25.5,2.14286 15,9.40714 4.5,2.14286 Z M 2.14286,19.2857 V 3.11786 L 14.3893,11.5929 c 0.1793,0.1244 0.3924,0.1911 0.6107,0.1911 0.2183,0 0.4314,-0.0667 0.6107,-0.1911 L 27.8571,3.11786 V 19.2857 Z"
-         fill="#00d254"
-         id="path5930"
-         style="stroke-width:0.36" />
-    </g>
-  </g>
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_150_108)">
+<path d="M46.4285 7.14258H3.57143C2.62423 7.14258 1.71582 7.51885 1.04605 8.18862C0.376275 8.85839 0 9.76681 0 10.714V39.2854C0 40.2326 0.376275 41.1411 1.04605 41.8107C1.71582 42.4806 2.62423 42.8569 3.57143 42.8569H46.4285C47.3758 42.8569 48.2842 42.4806 48.954 41.8107C49.6237 41.1411 50 40.2326 50 39.2854V10.714C50 9.76681 49.6237 8.85839 48.954 8.18862C48.2842 7.51885 47.3758 7.14258 46.4285 7.14258ZM42.5 10.714L25 22.8211L7.5 10.714H42.5ZM3.57143 39.2854V12.339L23.9822 26.4641C24.281 26.6714 24.6362 26.7826 25 26.7826C25.3638 26.7826 25.719 26.6714 26.0178 26.4641L46.4285 12.339V39.2854H3.57143Z" fill="#1096E1"/>
+</g>
+<defs>
+<clipPath id="clip0_150_108">
+<rect width="50" height="50" fill="white"/>
+</clipPath>
+</defs>
 </svg>

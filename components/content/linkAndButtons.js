@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Text } from "./content";
 import Image from "next/image";
+import { popUp } from "../decorations/animations";
 
 export const IntraPageLink = (props) => {
   return (
-    <Container as={props.as}>
+    <Container delay={props.delay} as={props.as}>
       <A href={props.href}>
-        <Image alt={props.alt} width="32" height="32" src={props.src}></Image>
+        <Image alt={props.alt} width="28" height="28" src={props.src}></Image>
         <Text>{props.children}</Text>
       </A>
     </Container>
@@ -52,5 +53,9 @@ const A = styled.a`
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
   width: 84px;
+  animation: ${popUp} ease 1s;
+  animation-delay: ${({ delay }) => delay};
+  animation-fill-mode: backwards;
 `;

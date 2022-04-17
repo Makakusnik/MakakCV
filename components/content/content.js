@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { devices } from "../../pages/_app";
 export const PrimaryColorText = styled.span`
   color: ${({ theme }) => theme.primary};
 `;
@@ -10,6 +10,7 @@ export const Text = styled.p`
   font-weight: ${({ fontWeight }) => fontWeight};
   color: ${({ theme, color }) => theme[color] || theme.text};
   text-align: ${({ textAlign }) => textAlign};
+  width: fit-content;
 `;
 
 export const Title = styled.h1`
@@ -41,13 +42,14 @@ Section.Content = ({ children, ...restProps }) => {
 Section.Content.displayName = "Content";
 
 Section.Article = ({ children, ...restProps }) => {
-  return (
-    <Article {...restProps}>
-      <ArticleContent>{children}</ArticleContent>
-    </Article>
-  );
+  return <Article {...restProps}>{children}</Article>;
 };
 Section.Article.displayName = "Article";
+
+Section.ArticleContent = ({ children, ...restProps }) => {
+  return <ArticleContent {...restProps}>{children}</ArticleContent>;
+};
+Section.ArticleContent.displayName = "ArticleContent";
 
 Section.ArticleHeading = ({ children, ...restProps }) => {
   return <ArticleHeading {...restProps}>{children}</ArticleHeading>;
@@ -59,6 +61,8 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 900px;
+  width: 100%;
   padding: 0px 15px;
 `;
 
@@ -70,39 +74,44 @@ const Header = styled.header`
   h2 {
     z-index: 2;
     position: relative;
-    top: 40px;
   }
 `;
 
 const Article = styled.article`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: ${({ template }) => template || "1fr"};
   color: ${({ theme }) => theme.text};
   font-family: Lato;
+  justify-content: center;
+  width: 100%;
   row-gap: 15px;
+
+  @media (max-width: ${devices.tablet}) {
+    grid-template-columns: ${({ templateTablet }) => templateTablet};
+  }
+  @media (max-width: ${devices.mobileL}) {
+    grid-template-columns: ${({ templateMobileL }) => templateMobileL};
+  }
 `;
 const ArticleHeading = styled.h3`
   display: flex;
-  flex-direction: column;
   color: ${({ theme }) => theme.text};
   font-family: Lato;
+  justify-content: ${({ center }) => center && "center"};
   font-size: 20px;
-  margin-top: 15px;
-  &:first-of-type {
-    margin-top: 0px;
-  }
+  margin-top: 25px;
+  margin-bottom: 15px;
 `;
 const ArticleContent = styled.div`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.text};
+  flex-wrap: wrap;
   font-family: sans-serif;
   word-spacing: 0.12em;
+  width: 100%;
   line-height: 1.6em;
   white-space: pre-wrap;
-  p {
-    margin: 10px 0px;
-  }
 `;
 
 export const InlineLink = styled.a`
@@ -124,7 +133,19 @@ const LinkTitle = styled.h2`
 const Container = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
   width: 100%;
+  &:nth-of-type(even) {
+    background-color: ${({ theme }) => theme.mediumDark};
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+  }
+  &:nth-of-type(odd) {
+    padding-bottom: 50px;
+  }
+  &:first-of-type {
+    padding-top: 50px;
+  }
 `;
 
 export const ImageContainer = styled.figure`

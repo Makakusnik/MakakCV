@@ -114,15 +114,17 @@ const Timestamp = styled.time`
 
 const Content = styled.div`
   display: flex;
-  flex-grow: 1;
+  width: 100%;
   height: 200px;
   flex-direction: column;
   position: relative;
   margin: 0 25px;
 `;
 const Circle = styled.div`
-  height: 25px;
-  width: 25px;
+  min-height: 25px;
+  min-width: 25px;
+  max-height: 25px;
+  max-width: 25px;
   border-radius: 50%;
   z-index: 2;
   background-color: ${({ theme, show }) =>
@@ -132,4 +134,5 @@ const Circle = styled.div`
 const Container = styled.div`
   display: flex;
   width: 100%;
+  min-width: 290px;
 `;
