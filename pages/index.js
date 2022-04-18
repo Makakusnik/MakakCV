@@ -433,7 +433,7 @@ export default function Home() {
                           layout="fixed"
                           width="260"
                           height="110"
-                          src="/Brainit.svg"
+                          src="/BrainIT.svg"
                           alt="Braint:IT company Logo."
                         ></Image>
                         <figcaption aria-hidden="false">
@@ -457,63 +457,71 @@ export default function Home() {
             <Section.Article template="1fr 1fr" templateTablet="1fr">
               <Section.ArticleContent>
                 <Section.ArticleHeading center>Frontend</Section.ArticleHeading>
-                <SkillContainer template="1fr 1fr" templateTablet="1fr 1fr">
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/ReactJS.svg" alt="ReactJS" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>React</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Next.js</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/ChakraJS.svg" alt="ChakraJS" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Chakra.js</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image
-                        layout="fill"
-                        src="/StyledComponents.svg"
-                        alt="Styled Components"
-                      />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Styled Components</Skill.Title>
-                  </Skill>
-                </SkillContainer>
+                <Animate data-inviewport="popUp">
+                  <SkillContainer template="1fr 1fr" templateTablet="1fr 1fr">
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image layout="fill" src="/ReactJS.svg" alt="ReactJS" />
+                      </Skill.ImageContainer>
+                      <Skill.Title>React</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Next.js</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image
+                          layout="fill"
+                          src="/ChakraJS.svg"
+                          alt="ChakraJS"
+                        />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Chakra.js</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image
+                          layout="fill"
+                          src="/StyledComponents.svg"
+                          alt="Styled Components"
+                        />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Styled Components</Skill.Title>
+                    </Skill>
+                  </SkillContainer>
+                </Animate>
               </Section.ArticleContent>
               <Section.ArticleContent>
                 <Section.ArticleHeading center>Backend</Section.ArticleHeading>
-                <SkillContainer template="1fr 1fr" templateMobileL="1fr 1fr">
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image
-                        layout="fill"
-                        src="/ExpressJS.svg"
-                        alt="ExpressJS"
-                      />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Express.js</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Node.js</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/MongoDB.svg" alt="MongoDB" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>MongoDB</Skill.Title>
-                  </Skill>
-                </SkillContainer>
+                <Animate data-inviewport="popUp">
+                  <SkillContainer template="1fr 1fr" templateMobileL="1fr 1fr">
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image
+                          layout="fill"
+                          src="/ExpressJS.svg"
+                          alt="ExpressJS"
+                        />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Express.js</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Node.js</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image layout="fill" src="/MongoDB.svg" alt="MongoDB" />
+                      </Skill.ImageContainer>
+                      <Skill.Title>MongoDB</Skill.Title>
+                    </Skill>
+                  </SkillContainer>
+                </Animate>
               </Section.ArticleContent>
             </Section.Article>
             <Section.Article>
@@ -521,40 +529,42 @@ export default function Home() {
                 <Section.ArticleHeading center>
                   Programming Languages
                 </Section.ArticleHeading>
-                <SkillContainer template="1fr 1fr">
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image
-                        layout="fill"
-                        src="/JavaScript.svg"
-                        alt="Javascript"
-                      />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Javascript</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image
-                        layout="fill"
-                        src="/TypeScript.svg"
-                        alt="Typescript"
-                      />
-                    </Skill.ImageContainer>
-                    <Skill.Title>Typescript</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/Html5.svg" alt="HTML5" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>HTML</Skill.Title>
-                  </Skill>
-                  <Skill>
-                    <Skill.ImageContainer>
-                      <Image layout="fill" src="/Css3.svg" alt="CSS3" />
-                    </Skill.ImageContainer>
-                    <Skill.Title>CSS</Skill.Title>
-                  </Skill>
-                </SkillContainer>
+                <Animate data-inviewport="popUp">
+                  <SkillContainer template="1fr 1fr">
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image
+                          layout="fill"
+                          src="/JavaScript.svg"
+                          alt="Javascript"
+                        />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Javascript</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image
+                          layout="fill"
+                          src="/TypeScript.svg"
+                          alt="Typescript"
+                        />
+                      </Skill.ImageContainer>
+                      <Skill.Title>Typescript</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image layout="fill" src="/Html5.svg" alt="HTML5" />
+                      </Skill.ImageContainer>
+                      <Skill.Title>HTML</Skill.Title>
+                    </Skill>
+                    <Skill>
+                      <Skill.ImageContainer>
+                        <Image layout="fill" src="/Css3.svg" alt="CSS3" />
+                      </Skill.ImageContainer>
+                      <Skill.Title>CSS</Skill.Title>
+                    </Skill>
+                  </SkillContainer>
+                </Animate>
               </Section.ArticleContent>
             </Section.Article>
           </Section.Content>
@@ -610,7 +620,7 @@ export default function Home() {
               </Contact>
               <Contact href="https://github.com/Makakusnik" userSelect="none">
                 <Contact.ImageContainer>
-                  <Image layout="fill" src="/Github.svg" alt="GitHub Logo" />
+                  <Image layout="fill" src="/GitHub.svg" alt="GitHub Logo" />
                 </Contact.ImageContainer>
                 <Contact.Text>Marek Fodor</Contact.Text>
               </Contact>

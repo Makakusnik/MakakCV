@@ -27,7 +27,6 @@ const A = styled.a`
   }
   &:hover {
     span {
-      ${({ theme }) => `filter: drop-shadow(0px 0px 2px ${theme.primary});`}
       transform: scale(1.2);
     }
   }

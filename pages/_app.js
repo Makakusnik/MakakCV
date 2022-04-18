@@ -37,26 +37,28 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${theme.dark};
         width:100%;
     }
+    [data-inviewport="popUp"] {
+      transition: top 0s linear, opacity 0s linear;
+      
+      will-change: opacity, top;
+    }
+    [data-inviewport="popUp"].is-inViewport {
+      transition: top 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
+    }
 
     [data-inviewport="popRight"] {
       transition: right 0s linear, opacity 0s linear;
-      right: 30px;
-      opacity: 0;
+      will-change: opacity, right;
     }
     [data-inviewport="popRight"].is-inViewport {
       transition: right 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
-      right: 0;
-      opacity: 1;
     }
     [data-inviewport="popLeft"] {
       transition: left 0s linear, opacity 0s linear;
-      left: 30px;
-      opacity: 0;
+      will-change: opacity, left;
     }
     [data-inviewport="popLeft"].is-inViewport {
       transition: left 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
-      left: 0;
-      opacity: 1;
     }
 
     
@@ -67,6 +69,10 @@ const inViewport = (entries) => {
     entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
   });
 };
+
+export function reportWebVitals(metric) {
+  console.log(metric);
+}
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

@@ -48,4 +48,15 @@ export const popRight = keyframes`
 
 export const Animate = styled.div`
   position: relative;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+  color: inherit;
+  flex-wrap: inherit;
+  font-family: inherit;
+  word-spacing: inherit;
+  width: inherit;
+  line-height: inherit;
+  white-space: inherit;
 `;
