@@ -39,26 +39,34 @@ const GlobalStyles = createGlobalStyle`
     }
     [data-inviewport="popUp"] {
       transition: top 0s linear, opacity 0s linear;
-      
-      will-change: opacity, top;
+      top: 30px;
+      opacity: 0;
     }
     [data-inviewport="popUp"].is-inViewport {
       transition: top 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
+      top:0;
+      opacity: 1;
     }
 
     [data-inviewport="popRight"] {
       transition: right 0s linear, opacity 0s linear;
-      will-change: opacity, right;
+      right: 30px;
+      opacity: 0;
     }
     [data-inviewport="popRight"].is-inViewport {
       transition: right 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
+      right: 0;
+      opacity: 1;
     }
     [data-inviewport="popLeft"] {
       transition: left 0s linear, opacity 0s linear;
-      will-change: opacity, left;
+      left: 30px;
+      opacity: 0;
     }
     [data-inviewport="popLeft"].is-inViewport {
       transition: left 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
+      left: 0;
+      opacity: 1;
     }
 
     
