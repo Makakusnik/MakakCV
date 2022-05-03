@@ -3,7 +3,7 @@ import { Text } from "./content";
 import Image from "next/image";
 import { popUp } from "../decorations/animations";
 
-export const IntraPageLink = (props) => {
+export const IconLink = (props) => {
   return (
     <Container delay={props.delay} as={props.as}>
       <A href={props.href}>

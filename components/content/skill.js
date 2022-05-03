@@ -11,7 +11,11 @@ Skill.ImageContainer = ({ children, ...restProps }) => {
 Skill.ImageContainer.displayName = "ImageContainer";
 
 Skill.Title = ({ children, ...restProps }) => {
-  return <Text {...restProps}>{children}</Text>;
+  return (
+    <Text textAlign="center" {...restProps}>
+      {children}
+    </Text>
+  );
 };
 Skill.Title.displayName = "Title";
 

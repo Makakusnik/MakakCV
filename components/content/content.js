@@ -4,23 +4,6 @@ export const PrimaryColorText = styled.span`
   color: ${({ theme }) => theme.primary};
 `;
 
-export const Text = styled.p`
-  font-family: ${({ fontFamily }) => fontFamily || "Lato"};
-  font-size: ${({ fontSize }) => fontSize || "16px"};
-  font-weight: ${({ fontWeight }) => fontWeight};
-  color: ${({ theme, color }) => theme[color] || theme.text};
-  text-align: ${({ textAlign }) => textAlign};
-  width: fit-content;
-`;
-
-export const Title = styled.h1`
-  font-family: ${({ fontFamily }) => fontFamily || "Lato"};
-  font-size: ${({ fontSize }) => fontSize || "16px"};
-  font-weight: ${({ fontWeight }) => fontWeight};
-  color: ${({ theme, color }) => theme[color] || theme.text};
-  text-align: ${({ textAlign }) => textAlign};
-`;
-
 export const Section = ({ children, ...restProps }) => {
   return <Container {...restProps}>{children}</Container>;
 };
@@ -78,21 +61,15 @@ const Header = styled.header`
 `;
 
 const Article = styled.article`
-  display: grid;
-  grid-template-columns: ${({ template }) => template || "1fr"};
+  display: flex;
   color: ${({ theme }) => theme.text};
   font-family: Lato;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   row-gap: 15px;
-
-  @media (max-width: ${devices.tablet}) {
-    grid-template-columns: ${({ templateTablet }) => templateTablet};
-  }
-  @media (max-width: ${devices.mobileL}) {
-    grid-template-columns: ${({ templateMobileL }) => templateMobileL};
-  }
 `;
+
 const ArticleHeading = styled.h3`
   display: flex;
   color: ${({ theme }) => theme.text};
@@ -108,10 +85,18 @@ const ArticleContent = styled.div`
   color: ${({ theme }) => theme.text};
   flex-wrap: wrap;
   font-family: sans-serif;
+  flex-basis: ${({ flexBasis }) => flexBasis};
   word-spacing: 0.12em;
-  width: 100%;
+  width: ${({ $width }) => $width || "100%"};
+  max-width: ${({ $width }) => $width || "100%"};
   line-height: 1.6em;
   white-space: pre-wrap;
+  @media (max-width: ${devices.tablet}) {
+    max-width: ${({ $widthTablet }) => $widthTablet || "100%"};
+  }
+  @media (max-width: ${devices.mobileS}) {
+    max-width: ${({ $widthMobileS }) => $widthMobileS || "100%"};
+  }
 `;
 
 export const InlineLink = styled.a`
@@ -153,4 +138,21 @@ export const ImageContainer = styled.figure`
   position: relative;
   overflow: hidden;
   background-color: ${({ theme }) => theme.dark};
+`;
+
+export const Text = styled.p`
+  font-family: ${({ fontFamily }) => fontFamily || "Lato"};
+  font-size: ${({ fontSize }) => fontSize || "16px"};
+  font-weight: ${({ fontWeight }) => fontWeight};
+  color: ${({ theme, color }) => theme[color] || theme.text};
+  text-align: ${({ textAlign }) => textAlign};
+  width: fit-content;
+`;
+
+export const Title = styled.h1`
+  font-family: ${({ fontFamily }) => fontFamily || "Lato"};
+  font-size: ${({ fontSize }) => fontSize || "16px"};
+  font-weight: ${({ fontWeight }) => fontWeight};
+  color: ${({ theme, color }) => theme[color] || theme.text};
+  text-align: ${({ textAlign }) => textAlign};
 `;

@@ -14,7 +14,7 @@ import {
   Text,
   Title,
 } from "../components/content/content";
-import { IntraPageLink } from "../components/content/linkAndButtons";
+import { IconLink } from "../components/content/linkAndButtons";
 import { ExperienceItem } from "../components/content/timeline";
 import { Skill } from "../components/content/skill";
 import { Contact } from "../components/content/contact";
@@ -34,6 +34,7 @@ export default function Home() {
                 width="67,5"
                 height="75"
                 priority
+                quality={100}
                 src="/MarekFodor.png"
                 alt="Marek Fodor, owner of website www.marekfodor.sk"
               />
@@ -51,46 +52,41 @@ export default function Home() {
             <SecondaryNav aria-label="Secondary Navigation">
               {/* TU BUDU INTRA-page linky*/}
               <Ul>
-                <IntraPageLink
+                <IconLink
                   delay="0.5s"
                   as="li"
                   href="#AboutMe"
                   src="/Avatar.svg"
                 >
                   About Me
-                </IntraPageLink>
-                <IntraPageLink
+                </IconLink>
+                <IconLink
                   delay="0.7s"
                   as="li"
                   href="#Experience"
                   src="/Experience.svg"
                 >
                   Experience
-                </IntraPageLink>
-                <IntraPageLink
-                  delay="0.9s"
-                  as="li"
-                  href="#Skills"
-                  src="/Skills.svg"
-                >
+                </IconLink>
+                <IconLink delay="0.9s" as="li" href="#Skills" src="/Skills.svg">
                   Skills
-                </IntraPageLink>
-                <IntraPageLink
+                </IconLink>
+                <IconLink
                   delay="1.1s"
                   as="li"
                   href="#Contact"
                   src="/Contact.svg"
                 >
                   Contact
-                </IntraPageLink>
-                <IntraPageLink
+                </IconLink>
+                <IconLink
                   delay="1.3s"
                   as="li"
                   href="#ContactMe"
                   src="/Dialog.svg"
                 >
                   Contact Me
-                </IntraPageLink>
+                </IconLink>
               </Ul>
             </SecondaryNav>
           </Column>
@@ -265,12 +261,14 @@ export default function Home() {
                   </p>
                 </Animate>
                 <Animate data-inviewport="popRight">
-                  <Section.ArticleHeading>Coding</Section.ArticleHeading>
+                  <Section.ArticleHeading>Skills</Section.ArticleHeading>
                   <p>
-                    Web related “career” started for me in november 2020 when I
+                    I discovered path of web development in november 2020 when I
                     started learning basics of HTML, CSS and javascript. Later I
-                    discovered mongodb, node.js, express.js and react.js a.k.a.
-                    MERN stack.
+                    discovered mongodb, node.js, express.js and react.js a.k.a.{" "}
+                    <strong>MERN</strong> stack. As I tried out many things I
+                    noticed that <strong>UI {"&"} UX</strong> may be another
+                    path I would like to explore a little.
                   </p>
                 </Animate>
                 <Animate data-inviewport="popRight">
@@ -306,16 +304,12 @@ export default function Home() {
         <Section>
           <Section.Header id="Experience">Experience</Section.Header>
           <Section.Content>
-            <Section.Article
-              template="1fr 1fr"
-              templateTablet="1fr"
-              templateMobileL="1fr"
-            >
-              <Section.ArticleContent>
-                <Section.ArticleHeading center>
-                  Education
-                </Section.ArticleHeading>
+            <Section.Article>
+              <Section.ArticleContent flexBasis="400px">
                 <Animate data-inviewport="popRight">
+                  <Section.ArticleHeading center>
+                    Education
+                  </Section.ArticleHeading>
                   <ExperienceItem>
                     <ExperienceItem.Circle show />
                     <ExperienceItem.Content>
@@ -380,9 +374,9 @@ export default function Home() {
                   </ExperienceItem>
                 </Animate>
               </Section.ArticleContent>
-              <Section.ArticleContent>
-                <Section.ArticleHeading center>Work</Section.ArticleHeading>
+              <Section.ArticleContent flexBasis="400px">
                 <Animate data-inviewport="popLeft">
+                  <Section.ArticleHeading center>Work</Section.ArticleHeading>
                   <ExperienceItem>
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
@@ -452,117 +446,157 @@ export default function Home() {
         {/* Skills */}
 
         <Section>
-          <Section.Header id="Skills">Skills</Section.Header>
+          <Animate data-inviewport="showUp">
+            <Section.Header id="Skills">Skills</Section.Header>
+          </Animate>
           <Section.Content>
-            <Section.Article template="1fr 1fr" templateTablet="1fr">
-              <Section.ArticleContent>
-                <Section.ArticleHeading center>Frontend</Section.ArticleHeading>
+            <Section.Article>
+              <Section.ArticleContent flexBasis="340px">
+                <Animate data-inviewport="popUp">
+                  <Section.ArticleHeading center>
+                    Frontend
+                  </Section.ArticleHeading>
+                </Animate>
                 <Animate data-inviewport="popUp">
                   <SkillContainer template="1fr 1fr" templateTablet="1fr 1fr">
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image layout="fill" src="/ReactJS.svg" alt="ReactJS" />
-                      </Skill.ImageContainer>
-                      <Skill.Title>React</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Next.js</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image
-                          layout="fill"
-                          src="/ChakraJS.svg"
-                          alt="ChakraJS"
-                        />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Chakra.js</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image
-                          layout="fill"
-                          src="/StyledComponents.svg"
-                          alt="Styled Components"
-                        />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Styled Components</Skill.Title>
-                    </Skill>
+                    <Animate data-inviewport="popUp" delay="0.4s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/ReactJS.svg"
+                            alt="ReactJS"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>React</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="0.6s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Next.js</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="0.8s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/ChakraJS.svg"
+                            alt="ChakraJS"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Chakra.js</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="1s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/StyledComponents.svg"
+                            alt="Styled Components"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Styled Components</Skill.Title>
+                      </Skill>
+                    </Animate>
                   </SkillContainer>
                 </Animate>
               </Section.ArticleContent>
-              <Section.ArticleContent>
-                <Section.ArticleHeading center>Backend</Section.ArticleHeading>
+              <Section.ArticleContent flexBasis="340px">
+                <Animate data-inviewport="popUp">
+                  <Section.ArticleHeading center>
+                    Backend
+                  </Section.ArticleHeading>
+                </Animate>
                 <Animate data-inviewport="popUp">
                   <SkillContainer template="1fr 1fr" templateMobileL="1fr 1fr">
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image
-                          layout="fill"
-                          src="/ExpressJS.svg"
-                          alt="ExpressJS"
-                        />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Express.js</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Node.js</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image layout="fill" src="/MongoDB.svg" alt="MongoDB" />
-                      </Skill.ImageContainer>
-                      <Skill.Title>MongoDB</Skill.Title>
-                    </Skill>
+                    <Animate data-inviewport="popUp" delay="0.4s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/ExpressJS.svg"
+                            alt="ExpressJS"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Express.js</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="0.6s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Node.js</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="0.8s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/MongoDB.svg"
+                            alt="MongoDB"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>MongoDB</Skill.Title>
+                      </Skill>
+                    </Animate>
                   </SkillContainer>
                 </Animate>
               </Section.ArticleContent>
-            </Section.Article>
-            <Section.Article>
               <Section.ArticleContent>
-                <Section.ArticleHeading center>
-                  Programming Languages
-                </Section.ArticleHeading>
+                <Animate data-inviewport="popUp">
+                  <Section.ArticleHeading center>
+                    Programming Languages
+                  </Section.ArticleHeading>
+                </Animate>
                 <Animate data-inviewport="popUp">
                   <SkillContainer template="1fr 1fr">
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image
-                          layout="fill"
-                          src="/JavaScript.svg"
-                          alt="Javascript"
-                        />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Javascript</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image
-                          layout="fill"
-                          src="/TypeScript.svg"
-                          alt="Typescript"
-                        />
-                      </Skill.ImageContainer>
-                      <Skill.Title>Typescript</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image layout="fill" src="/Html5.svg" alt="HTML5" />
-                      </Skill.ImageContainer>
-                      <Skill.Title>HTML</Skill.Title>
-                    </Skill>
-                    <Skill>
-                      <Skill.ImageContainer>
-                        <Image layout="fill" src="/Css3.svg" alt="CSS3" />
-                      </Skill.ImageContainer>
-                      <Skill.Title>CSS</Skill.Title>
-                    </Skill>
+                    <Animate data-inviewport="popUp" delay="0.4s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/JavaScript.svg"
+                            alt="Javascript"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Javascript</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="0.6s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image
+                            layout="fill"
+                            src="/TypeScript.svg"
+                            alt="Typescript"
+                          />
+                        </Skill.ImageContainer>
+                        <Skill.Title>Typescript</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="0.8s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image layout="fill" src="/Html5.svg" alt="HTML5" />
+                        </Skill.ImageContainer>
+                        <Skill.Title>HTML</Skill.Title>
+                      </Skill>
+                    </Animate>
+                    <Animate data-inviewport="popUp" delay="1s">
+                      <Skill>
+                        <Skill.ImageContainer>
+                          <Image layout="fill" src="/Css3.svg" alt="CSS3" />
+                        </Skill.ImageContainer>
+                        <Skill.Title>CSS</Skill.Title>
+                      </Skill>
+                    </Animate>
                   </SkillContainer>
                 </Animate>
               </Section.ArticleContent>
@@ -576,54 +610,70 @@ export default function Home() {
           <Section.Header id="Contact">Contact</Section.Header>
           <Section.Content>
             <ContactContainer>
-              <Contact href="tel:+421915498774">
-                <Contact.ImageContainer>
-                  <Image
-                    layout="fill"
-                    src="/Contact.svg"
-                    alt="Contact Picture"
-                  />
-                </Contact.ImageContainer>
-                <Contact.Text>+421 915498774</Contact.Text>
-              </Contact>
-              <Contact>
-                <Contact.ImageContainer>
-                  <Image layout="fill" src="/Mail.svg" alt="Mail Picture" />
-                </Contact.ImageContainer>
-                <Contact.Text>fodormarek5@gmail.com</Contact.Text>
-              </Contact>
-              <Contact
-                href="https://www.linkedin.com/in/marek-fodor/"
-                userSelect="none"
-              >
-                <Contact.ImageContainer>
-                  <Image
-                    layout="fill"
-                    src="/LinkedIn.svg"
-                    alt="LinkedIn Logo"
-                  />
-                </Contact.ImageContainer>
-                <Contact.Text>Marek Fodor</Contact.Text>
-              </Contact>
-              <Contact
-                href="https://www.instagram.com/marekus.s/"
-                userSelect="none"
-              >
-                <Contact.ImageContainer>
-                  <Image
-                    layout="fill"
-                    src="/Instagram.svg"
-                    alt="Instagram Logo"
-                  />
-                </Contact.ImageContainer>
-                <Contact.Text>Marek Fodor</Contact.Text>
-              </Contact>
-              <Contact href="https://github.com/Makakusnik" userSelect="none">
-                <Contact.ImageContainer>
-                  <Image layout="fill" src="/GitHub.svg" alt="GitHub Logo" />
-                </Contact.ImageContainer>
-                <Contact.Text>Marek Fodor</Contact.Text>
-              </Contact>
+              <Animate data-inviewport="popUp" delay="0s">
+                <Contact href="tel:+421915498774">
+                  <Contact.ImageContainer>
+                    <Image
+                      layout="fill"
+                      src="/Contact.svg"
+                      alt="Contact Picture"
+                    />
+                  </Contact.ImageContainer>
+                  <Contact.Text>+421 915498774</Contact.Text>
+                </Contact>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.1s">
+                <Contact target="_blank" href="mailto:fodormarek5@gmail.com">
+                  <Contact.ImageContainer>
+                    <Image layout="fill" src="/Mail.svg" alt="Mail Picture" />
+                  </Contact.ImageContainer>
+                  <Contact.Text>fodormarek5@gmail.com</Contact.Text>
+                </Contact>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.2s">
+                <Contact
+                  href="https://www.linkedin.com/in/marek-fodor/"
+                  target="_blank"
+                  userSelect="none"
+                >
+                  <Contact.ImageContainer>
+                    <Image
+                      layout="fill"
+                      src="/LinkedIn.svg"
+                      alt="LinkedIn Logo"
+                    />
+                  </Contact.ImageContainer>
+                  <Contact.Text>Marek Fodor</Contact.Text>
+                </Contact>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.3s">
+                <Contact
+                  target="_blank"
+                  href="https://www.instagram.com/marekus.s/"
+                  userSelect="none"
+                >
+                  <Contact.ImageContainer>
+                    <Image
+                      layout="fill"
+                      src="/Instagram.svg"
+                      alt="Instagram Logo"
+                    />
+                  </Contact.ImageContainer>
+                  <Contact.Text>Marek Fodor</Contact.Text>
+                </Contact>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.4s">
+                <Contact
+                  href="https://github.com/Makakusnik"
+                  target="_blank"
+                  userSelect="none"
+                >
+                  <Contact.ImageContainer>
+                    <Image layout="fill" src="/GitHub.svg" alt="GitHub Logo" />
+                  </Contact.ImageContainer>
+                  <Contact.Text>Marek Fodor</Contact.Text>
+                </Contact>
+              </Animate>
             </ContactContainer>
           </Section.Content>
         </Section>
@@ -631,30 +681,49 @@ export default function Home() {
         {/* Contact Me */}
 
         <Section>
-          <Section.Header id="ContactMe">Contact Me</Section.Header>
+          <Animate data-inviewport="popUp" delay="0.2s">
+            <Section.Header id="ContactMe">Contact Me</Section.Header>
+          </Animate>
           <Section.Content>
-            <FormContainer>
-              <Field>
-                <Field.Label>From</Field.Label>
-                <Field.Input type="email"></Field.Input>
-              </Field>
-              <Field>
-                <Field.Label>To</Field.Label>
-                <Field.FakeInput type="email">
-                  fodormarek5@gmail.com
-                </Field.FakeInput>
-              </Field>
-              <Field>
-                <Field.Label>Message</Field.Label>
-                <Field.Input
-                  as="textarea"
-                  data-size="big"
-                  type="text"
-                ></Field.Input>
-              </Field>
-              <Field>
-                <Field.Button>Send</Field.Button>
-              </Field>
+            <FormContainer
+              action="https://formspree.io/f/mzbojqjd"
+              method="POST"
+            >
+              <Animate data-inviewport="popUp" delay="0.2s">
+                <Field>
+                  <Field.Label>From</Field.Label>
+                  <Field.Input
+                    type="email"
+                    id="email"
+                    name="email"
+                  ></Field.Input>
+                </Field>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.2s">
+                <Field>
+                  <Field.Label>To</Field.Label>
+                  <Field.FakeInput type="email">
+                    fodormarek5@gmail.com
+                  </Field.FakeInput>
+                </Field>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.2s">
+                <Field>
+                  <Field.Label>Message</Field.Label>
+                  <Field.Input
+                    as="textarea"
+                    data-size="big"
+                    type="text"
+                    name="message"
+                    id="message"
+                  ></Field.Input>
+                </Field>
+              </Animate>
+              <Animate data-inviewport="popUp" delay="0.2s">
+                <Field>
+                  <Field.Button type="submit">Send</Field.Button>
+                </Field>
+              </Animate>
             </FormContainer>
           </Section.Content>
         </Section>
@@ -669,6 +738,7 @@ export default function Home() {
 }
 
 const Footer = styled.footer`
+  display: flex;
   color: ${({ theme }) => theme.text};
   border-top: 3px solid ${({ theme }) => theme.primary};
   height: 60px;
@@ -682,6 +752,7 @@ const FormContainer = styled.form`
   display: flex;
   width: 100%;
   padding: 50px;
+  max-width: 600px;
   flex-direction: column;
   row-gap: 15px;
 `;
@@ -744,11 +815,9 @@ const Header = styled.header`
   background: url("gradientBG.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  padding-top: 100px;
+  padding-top: 50px;
   background-position-y: 100%;
-  min-height: 840px;
-  max-height: 1300px;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -767,7 +836,7 @@ const PhotoContainer = styled(ImageContainer)`
   width: 130px;
   border-radius: 50%;
   height: 130px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   & > span {
     position: relative;
     top: 10px;

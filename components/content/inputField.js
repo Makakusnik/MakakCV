@@ -16,7 +16,7 @@ Field.Label = ({ children, ...restProps }) => {
 Field.Label.displayName = "Label";
 
 Field.Input = (props) => {
-  return <Input id="email" {...props}></Input>;
+  return <Input {...props}></Input>;
 };
 
 Field.Input.displayName = "Input";
@@ -27,7 +27,7 @@ Field.FakeInput = ({ children, ...restProps }) => {
 Field.FakeInput.displayName = "FakeInput";
 
 Field.Button = ({ children, ...restProps }) => {
-  return <Button type="submit" {...restProps} value={children} />;
+  return <Button {...restProps} value={children} />;
 };
 Field.Button.displayName = "Button";
 

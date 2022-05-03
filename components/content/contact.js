@@ -26,9 +26,12 @@ const Container = styled.a`
   transition: transform 0.4s ease-in-out;
   column-gap: 25px;
   align-items: center;
-  padding: 5px;
-  width: 230px;
+  padding: 10px;
+  width: 250px;
+  left: 30px;
+  position: relative;
   display: flex;
+  border: 2px solid transparent;
   &:link {
     text-decoration: none;
   }
@@ -36,5 +39,8 @@ const Container = styled.a`
     user-select: ${({ userSelect }) => userSelect};
     cursor: pointer;
     transform: scale(1.1);
+  }
+  &:focus {
+    border: 2px solid ${({ theme }) => theme.primary};
   }
 `;

@@ -118,7 +118,7 @@ const Content = styled.div`
   height: 200px;
   flex-direction: column;
   position: relative;
-  margin: 0 25px;
+  margin: 0 15px;
 `;
 const Circle = styled.div`
   min-height: 25px;

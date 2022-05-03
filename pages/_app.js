@@ -29,45 +29,21 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         list-style-type: none;
         box-sizing: border-box;
+        outline: none;
     }
     abbr {
       text-decoration: none;
     }
+    html{ 
+      width: 100vw;
+        overflow-x: hidden;
+    }
     body { 
         background-color: ${theme.dark};
-        width:100%;
+        width: 100vw;
+        overflow-x: hidden;
     }
-    [data-inviewport="popUp"] {
-      transition: top 0s linear, opacity 0s linear;
-      top: 30px;
-      opacity: 0;
-    }
-    [data-inviewport="popUp"].is-inViewport {
-      transition: top 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
-      top:0;
-      opacity: 1;
-    }
-
-    [data-inviewport="popRight"] {
-      transition: right 0s linear, opacity 0s linear;
-      right: 30px;
-      opacity: 0;
-    }
-    [data-inviewport="popRight"].is-inViewport {
-      transition: right 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
-      right: 0;
-      opacity: 1;
-    }
-    [data-inviewport="popLeft"] {
-      transition: left 0s linear, opacity 0s linear;
-      left: 30px;
-      opacity: 0;
-    }
-    [data-inviewport="popLeft"].is-inViewport {
-      transition: left 0.3s 0.4s ease, opacity 0.3s 0.4s ease;
-      left: 0;
-      opacity: 1;
-    }
+    
 
     
 `;
@@ -77,10 +53,6 @@ const inViewport = (entries) => {
     entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
   });
 };
-
-export function reportWebVitals(metric) {
-  console.log(metric);
-}
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -92,7 +64,6 @@ function MyApp({ Component, pageProps }) {
 
     // Attach observer to every [data-inviewport] element:
     const ELs_inViewport = document.querySelectorAll("[data-inviewport]");
-    console.log(ELs_inViewport);
     ELs_inViewport.forEach((EL) => {
       Obs.observe(EL, obsOptions);
     });

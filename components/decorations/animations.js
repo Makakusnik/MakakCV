@@ -59,4 +59,59 @@ export const Animate = styled.div`
   width: inherit;
   line-height: inherit;
   white-space: inherit;
+  &[data-inviewport="showUp"] {
+    transition: opacity 0s linear;
+    opacity: 0;
+  }
+  &[data-inviewport="showUp"].is-inViewport {
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-delay: ${({ delay }) => delay || "0.4s"};
+    transition-property: opacity;
+    opacity: 1;
+  }
+  &[data-inviewport="popUp"] {
+    transition: transform 0s linear, opacity 0s linear;
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  &[data-inviewport="popUp"].is-inViewport {
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-delay: ${({ delay }) => delay || "0.4s"};
+    transition-property: transform, opacity;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &[data-inviewport="popRight"] {
+    transition: transform 0s linear, opacity 0s linear;
+    transition-property: transform, opacity;
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  &[data-inviewport="popRight"].is-inViewport {
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-delay: ${({ delay }) => delay || "0.4s"};
+    transition-property: transform, opacity;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  &[data-inviewport="popLeft"] {
+    transition-timing-function: linear;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    transition-property: transform, opacity;
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  &[data-inviewport="popLeft"].is-inViewport {
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-delay: ${({ delay }) => delay || "0.4s"};
+    transition-property: transform, opacity;
+    transform: translateX(0);
+    opacity: 1;
+  }
 `;
