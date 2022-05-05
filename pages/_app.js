@@ -73,13 +73,13 @@ function MyApp({ Component, pageProps }) {
     <>
       <GlobalStyles />
       <Head>
-        <meta property="og:title" content="Marek fodor" />
+        <meta property="og:title" content="Marek Fodor" />
         <meta property="og:description" content="Junior Frontend Developer" />
         <meta property="og:url" content="https://www.marekus.eu/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.pngwing.com/en/free-png-tliwd"
+          content="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
         />
         <title>Marek Fodor - Frontend Dev</title>
       </Head>
