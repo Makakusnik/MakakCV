@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useEffect } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
@@ -71,6 +72,16 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyles />
+      <Head>
+        <meta property="og:title" content="Marek fodor" />
+        <meta property="og:type" content="Junior Frontend Developer" />
+        <meta property="og:url" content="https://www.marekus.eu/" />
+        <meta
+          property="og:image"
+          content="https://www.pngwing.com/en/free-png-tliwd"
+        />
+        <title>Marek Fodor - Frontend Dev</title>
+      </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
