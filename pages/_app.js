@@ -76,6 +76,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Marek fodor" />
         <meta property="og:description" content="Junior Frontend Developer" />
         <meta property="og:url" content="https://www.marekus.eu/" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://www.pngwing.com/en/free-png-tliwd"
