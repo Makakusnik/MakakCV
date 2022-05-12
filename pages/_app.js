@@ -73,6 +73,16 @@ function MyApp({ Component, pageProps }) {
     <>
       <GlobalStyles />
       <Head>
+        <meta name="description" content="Online curriculum vitae." />
+        <meta
+          name="keywords"
+          content="Marek, Fodor, Marek Fodor, Frontend Developer, Frontend"
+        />
+        <meta name="author" content="Marek Fodor" />
+        <meta
+          name="Description"
+          content="Hey! My name is Marek Fodor and I Am self-taught junior frontend developer. Checkout my personal page!"
+        ></meta>
         <meta property="og:title" content="Marek Fodor" />
         <meta property="og:description" content="Junior Frontend Developer" />
         <meta property="og:url" content="https://www.marekus.eu/" />
