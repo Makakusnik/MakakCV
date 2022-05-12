@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Online curriculum vitae." />
         <meta
           name="keywords"
-          content="Marek, Fodor, Marek Fodor, Frontend Developer, Frontend"
+          content="Marek,Fodor,Marek Fodor,Junior Frontend Developer,Frontend Developer,Frontend"
         />
         <meta name="author" content="Marek Fodor" />
         <meta
