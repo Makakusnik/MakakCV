@@ -279,7 +279,7 @@ export default function Home() {
                         <abbr title="Mongo Express React Node.">MERN</abbr>
                       </strong>
                     </InlineLink>{" "}
-                    stack in which I'm planning to get more experience.
+                    stack in which I&apos;m planning to get more experience.
                   </p>
                 </Animate>
                 <Animate data-inviewport="popRight">
@@ -308,9 +308,9 @@ export default function Home() {
                 <Animate data-inviewport="popRight">
                   <Section.ArticleHeading>Future</Section.ArticleHeading>
                   <p>
-                    In near future, I'm planning to publish coding blog where
-                    I'll post / translate articles about web development,
-                    design, server administration and many more.
+                    In near future, I&apos;m planning to publish coding blog
+                    where I&apos;ll post / translate articles about web
+                    development, design, server administration and many more.
                   </p>
                 </Animate>
               </Section.ArticleContent>
