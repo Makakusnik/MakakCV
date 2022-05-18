@@ -528,7 +528,7 @@ export default function Home() {
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
                       <ExperienceItem.Timestamp left={false}>
-                        9 / 2022 -
+                        9 / 2021 - {"            "}
                       </ExperienceItem.Timestamp>
                       <Title fontSize="22px" as="h3">
                         Syncreon Tilburg, NL
@@ -543,11 +543,11 @@ export default function Home() {
                           layout="fixed"
                           width="260"
                           height="110"
-                          src="/BrainIT.svg"
-                          alt="Braint:IT company Logo."
+                          src="/syncreon.svg"
+                          alt="Syncreon company Logo."
                         ></Image>
                         <figcaption aria-hidden="false">
-                          Decathlon company logo.
+                          Syncreon company logo.
                         </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
@@ -937,7 +937,7 @@ const Header = styled.header`
   background-repeat: no-repeat;
   padding-top: 50px;
   background-position-y: 100%;
-  min-height: 100vh;
+  min-height: 750px;
   flex-direction: column;
   align-items: center;
   width: 100%;
