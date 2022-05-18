@@ -523,6 +523,37 @@ export default function Home() {
                     <ExperienceItem.Circle show={true} />
                   </ExperienceItem>
                 </Animate>
+                <Animate data-inviewport="popLeft">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={false}>
+                        9 / 2022 -
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h3">
+                        Syncreon Tilburg, NL
+                      </Title>
+                      <Text>Warehouse worker</Text>
+                      <ExperienceItem.PictureContainer
+                        top={70}
+                        right={-30}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="260"
+                          height="110"
+                          src="/BrainIT.svg"
+                          alt="Braint:IT company Logo."
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          Decathlon company logo.
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={true} />
+                  </ExperienceItem>
+                </Animate>
               </Section.ArticleContent>
             </Section.Article>
           </Section.Content>
