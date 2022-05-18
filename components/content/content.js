@@ -58,6 +58,7 @@ const Header = styled.header`
     z-index: 2;
     position: relative;
   }
+  padding-top: ${({ paddingTop }) => paddingTop};
 `;
 
 const Article = styled.article`
@@ -119,12 +120,14 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
+  padding: 50px 0;
   width: 100%;
   &:nth-of-type(even) {
     background-color: ${({ theme }) => theme.mediumDark};
     clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+    padding-top: 100px;
   }
+
   &:nth-of-type(odd) {
     padding-bottom: 50px;
   }

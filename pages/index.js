@@ -246,29 +246,40 @@ export default function Home() {
       </Header>
       <Main>
         {/* About me */}
-
         <Section>
-          <Section.Header id="AboutMe">About Me</Section.Header>
+          <Animate delay="0.2s" data-inviewport="showUp">
+            <Section.Header id="AboutMe">About Me</Section.Header>
+          </Animate>
           <Section.Content>
-            <Section.Article title="Me">
+            <Section.Article>
               <Section.ArticleContent>
                 <Animate data-inviewport="popRight">
                   <Section.ArticleHeading>Me</Section.ArticleHeading>
                   <p>
-                    I am self-taught junior frontend, soon fullstack developer.
-                    I have big passion for learning new technologies related to
-                    web, games, graphics or computers in general.
+                    I am self-taught junior frontend developer, aspiring to be
+                    fullstack developer. I have big passion for learning new
+                    technologies related to web, games, graphics or computers in
+                    general.
                   </p>
                 </Animate>
                 <Animate data-inviewport="popRight">
-                  <Section.ArticleHeading>Skills</Section.ArticleHeading>
+                  <Section.ArticleHeading>
+                    Web Development
+                  </Section.ArticleHeading>
                   <p>
                     I discovered path of web development in november 2020 when I
                     started learning basics of HTML, CSS and javascript. Later I
                     discovered mongodb, node.js, express.js and react.js a.k.a.{" "}
-                    <strong>MERN</strong> stack. As I tried out many things I
-                    noticed that <strong>UI {"&"} UX</strong> may be another
-                    path I would like to explore a little.
+                    <InlineLink
+                      href="https://www.mongodb.com/mern-stack"
+                      target="_blank"
+                      title="MERN Stack description on Mongodb website."
+                    >
+                      <strong>
+                        <abbr title="Mongo Express React Node.">MERN</abbr>
+                      </strong>
+                    </InlineLink>{" "}
+                    stack in which I'm planning to get more experience.
                   </p>
                 </Animate>
                 <Animate data-inviewport="popRight">
@@ -294,6 +305,14 @@ export default function Home() {
                     in Netherlands, as warehouse worker.
                   </p>
                 </Animate>
+                <Animate data-inviewport="popRight">
+                  <Section.ArticleHeading>Future</Section.ArticleHeading>
+                  <p>
+                    In near future, I'm planning to publish coding blog where
+                    I'll post / translate articles about web development,
+                    design, server administration and many more.
+                  </p>
+                </Animate>
               </Section.ArticleContent>
             </Section.Article>
           </Section.Content>
@@ -302,7 +321,11 @@ export default function Home() {
         {/* Experience */}
 
         <Section>
-          <Section.Header id="Experience">Experience</Section.Header>
+          <Animate delay="0.2s" data-inviewport="showUp">
+            <Section.Header paddingTop="50px" id="Experience">
+              Experience
+            </Section.Header>
+          </Animate>
           <Section.Content>
             <Section.Article>
               <Section.ArticleContent flexBasis="400px">
@@ -380,8 +403,70 @@ export default function Home() {
                   <ExperienceItem>
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
-                      <ExperienceItem.Timestamp left={false} dateTime="P182D">
-                        4 / 2021 - 9 / 2022
+                      <ExperienceItem.Timestamp left={false} dateTime="P90D">
+                        6 / 2018 - 9 / 2018
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h3">
+                        Tesco Distribution Centre, Thurrock UK
+                      </Title>
+                      <Text>Warehouse Worker</Text>
+                      <ExperienceItem.PictureContainer
+                        top={50}
+                        right={-30}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="200"
+                          height="110"
+                          src="/tesco.svg"
+                          alt="Tesco Logo."
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          Tesco company logo.
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={true} />
+                  </ExperienceItem>
+                </Animate>
+                <Animate data-inviewport="popLeft">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={false} dateTime="P90D">
+                        5 / 2019 - 8 / 2019
+                      </ExperienceItem.Timestamp>
+                      <Title fontSize="22px" as="h3">
+                        Ocado, Tamsworth UK
+                      </Title>
+                      <Text>Warehouse worker</Text>
+                      <ExperienceItem.PictureContainer
+                        top={80}
+                        right={-10}
+                        opacity={0.5}
+                      >
+                        <Image
+                          layout="fixed"
+                          width="120"
+                          height="80"
+                          src="/ocado.svg"
+                          alt="Ocado Logo."
+                        ></Image>
+                        <figcaption aria-hidden="false">
+                          Ocado company logo.
+                        </figcaption>
+                      </ExperienceItem.PictureContainer>
+                    </ExperienceItem.Content>
+                    <ExperienceItem.Circle show={true} />
+                  </ExperienceItem>
+                </Animate>
+                <Animate data-inviewport="popLeft">
+                  <ExperienceItem>
+                    <ExperienceItem.Circle />
+                    <ExperienceItem.Content>
+                      <ExperienceItem.Timestamp left={false} dateTime="P90D">
+                        10 / 2020 - 1 / 2021
                       </ExperienceItem.Timestamp>
                       <Title fontSize="22px" as="h3">
                         Decathlon
@@ -411,8 +496,8 @@ export default function Home() {
                   <ExperienceItem>
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
-                      <ExperienceItem.Timestamp left={false} dateTime="P182D">
-                        4 / 2021 - 9 / 2022
+                      <ExperienceItem.Timestamp left={false} dateTime="P90D">
+                        1 / 2021 - 4 / 2021
                       </ExperienceItem.Timestamp>
                       <Title fontSize="22px" as="h3">
                         Brain:IT
@@ -446,7 +531,7 @@ export default function Home() {
         {/* Skills */}
 
         <Section>
-          <Animate data-inviewport="showUp">
+          <Animate delay="0.2s" data-inviewport="showUp">
             <Section.Header id="Skills">Skills</Section.Header>
           </Animate>
           <Section.Content>
@@ -607,7 +692,11 @@ export default function Home() {
         {/* Contact */}
 
         <Section>
-          <Section.Header id="Contact">Contact</Section.Header>
+          <Animate delay="0.2s" data-inviewport="showUp">
+            <Section.Header paddingTop="50px" id="Contact">
+              Contact
+            </Section.Header>
+          </Animate>
           <Section.Content>
             <ContactContainer>
               <Animate data-inviewport="popUp" delay="0s">
@@ -681,7 +770,7 @@ export default function Home() {
         {/* Contact Me */}
 
         <Section>
-          <Animate data-inviewport="popUp" delay="0.2s">
+          <Animate delay="0.2s" data-inviewport="showUp">
             <Section.Header id="ContactMe">Contact Me</Section.Header>
           </Animate>
           <Section.Content>
