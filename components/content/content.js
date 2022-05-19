@@ -126,8 +126,11 @@ const Container = styled.section`
     background-color: ${({ theme }) => theme.mediumDark};
     clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
     padding-top: 100px;
+    padding-bottom: 50px;
+    @media (max-width: ${devices.mobileL}) {
+      padding-bottom: 120px;
+    }
   }
-
   &:nth-of-type(odd) {
     padding-bottom: 50px;
   }

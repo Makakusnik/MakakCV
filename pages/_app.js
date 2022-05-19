@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta
           name="description"
-          content="Hey! My name is Marek Fodor and I Am self-taught junior frontend developer. Checkout my personal page!"
+          content="Hey! My name is Marek Fodor and I'm self-taught junior frontend developer. Checkout my personal page!"
         />
         <meta
           name="keywords"
@@ -86,10 +86,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:description" content="Junior Frontend Developer" />
         <meta property="og:url" content="https://www.marekus.eu/" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
-        />
+        <meta property="og:image" content="/MarekFodor.png" />
         <title>Marek Fodor - Frontend Dev</title>
       </Head>
       <ThemeProvider theme={theme}>
