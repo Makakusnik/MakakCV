@@ -7,7 +7,7 @@ export const IconLink = (props) => {
   return (
     <Container delay={props.delay} as={props.as}>
       <A href={props.href}>
-        <Image alt={props.alt} width="28" height="28" src={props.src}></Image>
+        <Image alt="" width="28" height="28" src={props.src}></Image>
         <Text>{props.children}</Text>
       </A>
     </Container>

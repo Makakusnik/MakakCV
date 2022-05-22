@@ -36,11 +36,11 @@ export default function Home() {
                 priority
                 quality={100}
                 src="/MarekFodor.png"
-                alt="Marek Fodor, owner of website www.marekfodor.sk"
+                alt="Marek Fodor"
               />
-              <figcaption aria-hidden="true">
+              <figcaption hidden aria-hidden="true" tabIndex="-1">
                 {/* TODO uprav domenu*/}
-                Marek Fodor, author of www.marekus.sk
+                Author and owner of www.marekus.eu
               </figcaption>
             </PhotoContainer>
             <Title fontSize="28px" as="h1" fontFamily="lato">
@@ -90,7 +90,7 @@ export default function Home() {
               </Ul>
             </SecondaryNav>
           </Column>
-          <Animated aria-hidden="true">
+          <Animated aria-hidden="true" tabIndex="-1">
             <BigCircle top={"-60px"} left={"5%"} diameter={130}>
               <FilledCircle
                 diameter={19}
@@ -354,11 +354,8 @@ export default function Home() {
                           width="110"
                           height="110"
                           src="/SosHandlova.svg"
-                          alt="Logo of Handlova High School"
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          School logo of Secondary Vocational School of Handlová
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={false} />
@@ -371,7 +368,7 @@ export default function Home() {
                       <ExperienceItem.Timestamp left={true} dateTime="P182D">
                         4 / 2021 - 9 / 2022
                       </ExperienceItem.Timestamp>
-                      <Title fontSize="22px" as="h4">
+                      <Title fontSize="22px" as="h3">
                         University of Žilina
                       </Title>
                       <Text>Faculty of Informatics</Text>
@@ -386,11 +383,8 @@ export default function Home() {
                           width="110"
                           height="110"
                           src="/UniversityOfZilina.svg"
-                          alt="Logo of University of Zilina"
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          School logo of Secondary Vocational School of Handlová
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={false} />
@@ -420,11 +414,8 @@ export default function Home() {
                           width="200"
                           height="110"
                           src="/tesco.svg"
-                          alt="Tesco Logo."
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          Tesco company logo.
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={true} />
@@ -451,11 +442,8 @@ export default function Home() {
                           width="120"
                           height="80"
                           src="/ocado.svg"
-                          alt="Ocado Logo."
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          Ocado company logo.
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={true} />
@@ -482,11 +470,8 @@ export default function Home() {
                           width="260"
                           height="110"
                           src="/Decathlon.svg"
-                          alt="Decathlon Logo."
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          Decathlon company logo.
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={true} />
@@ -513,11 +498,8 @@ export default function Home() {
                           width="260"
                           height="110"
                           src="/BrainIT.svg"
-                          alt="Braint:IT company Logo."
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          Decathlon company logo.
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={true} />
@@ -544,11 +526,8 @@ export default function Home() {
                           width="260"
                           height="110"
                           src="/syncreon.svg"
-                          alt="Syncreon company Logo."
+                          alt=""
                         ></Image>
-                        <figcaption aria-hidden="false">
-                          Syncreon company logo.
-                        </figcaption>
                       </ExperienceItem.PictureContainer>
                     </ExperienceItem.Content>
                     <ExperienceItem.Circle show={true} />
@@ -578,11 +557,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.4s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image
-                            layout="fill"
-                            src="/ReactJS.svg"
-                            alt="ReactJS"
-                          />
+                          <Image layout="fill" src="/ReactJS.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>React</Skill.Title>
                       </Skill>
@@ -590,7 +565,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.6s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image layout="fill" src="/NextJS.svg" alt="NextJS" />
+                          <Image layout="fill" src="/NextJS.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>Next.js</Skill.Title>
                       </Skill>
@@ -598,11 +573,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.8s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image
-                            layout="fill"
-                            src="/ChakraJS.svg"
-                            alt="ChakraJS"
-                          />
+                          <Image layout="fill" src="/ChakraJS.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>Chakra.js</Skill.Title>
                       </Skill>
@@ -613,7 +584,7 @@ export default function Home() {
                           <Image
                             layout="fill"
                             src="/StyledComponents.svg"
-                            alt="Styled Components"
+                            alt=""
                           />
                         </Skill.ImageContainer>
                         <Skill.Title>Styled Components</Skill.Title>
@@ -633,11 +604,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.4s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image
-                            layout="fill"
-                            src="/ExpressJS.svg"
-                            alt="ExpressJS"
-                          />
+                          <Image layout="fill" src="/ExpressJS.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>Express.js</Skill.Title>
                       </Skill>
@@ -645,7 +612,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.6s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image layout="fill" src="/NodeJS.svg" alt="NodeJS" />
+                          <Image layout="fill" src="/NodeJS.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>Node.js</Skill.Title>
                       </Skill>
@@ -653,11 +620,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.8s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image
-                            layout="fill"
-                            src="/MongoDB.svg"
-                            alt="MongoDB"
-                          />
+                          <Image layout="fill" src="/MongoDB.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>MongoDB</Skill.Title>
                       </Skill>
@@ -676,11 +639,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.4s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image
-                            layout="fill"
-                            src="/JavaScript.svg"
-                            alt="Javascript"
-                          />
+                          <Image layout="fill" src="/JavaScript.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>Javascript</Skill.Title>
                       </Skill>
@@ -688,11 +647,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.6s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image
-                            layout="fill"
-                            src="/TypeScript.svg"
-                            alt="Typescript"
-                          />
+                          <Image layout="fill" src="/TypeScript.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>Typescript</Skill.Title>
                       </Skill>
@@ -700,7 +655,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="0.8s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image layout="fill" src="/Html5.svg" alt="HTML5" />
+                          <Image layout="fill" src="/Html5.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>HTML</Skill.Title>
                       </Skill>
@@ -708,7 +663,7 @@ export default function Home() {
                     <Animate data-inviewport="popUp" delay="1s">
                       <Skill>
                         <Skill.ImageContainer>
-                          <Image layout="fill" src="/Css3.svg" alt="CSS3" />
+                          <Image layout="fill" src="/Css3.svg" alt="" />
                         </Skill.ImageContainer>
                         <Skill.Title>CSS</Skill.Title>
                       </Skill>
@@ -733,11 +688,7 @@ export default function Home() {
               <Animate data-inviewport="popUp" delay="0s">
                 <Contact href="tel:+421915498774">
                   <Contact.ImageContainer>
-                    <Image
-                      layout="fill"
-                      src="/Contact.svg"
-                      alt="Contact Picture"
-                    />
+                    <Image layout="fill" src="/Contact.svg" alt="" />
                   </Contact.ImageContainer>
                   <Contact.Text>+421 915498774</Contact.Text>
                 </Contact>
@@ -745,7 +696,7 @@ export default function Home() {
               <Animate data-inviewport="popUp" delay="0.1s">
                 <Contact target="_blank" href="mailto:fodormarek5@gmail.com">
                   <Contact.ImageContainer>
-                    <Image layout="fill" src="/Mail.svg" alt="Mail Picture" />
+                    <Image layout="fill" src="/Mail.svg" alt="" />
                   </Contact.ImageContainer>
                   <Contact.Text>fodormarek5@gmail.com</Contact.Text>
                 </Contact>
@@ -757,11 +708,7 @@ export default function Home() {
                   userSelect="none"
                 >
                   <Contact.ImageContainer>
-                    <Image
-                      layout="fill"
-                      src="/LinkedIn.svg"
-                      alt="LinkedIn Logo"
-                    />
+                    <Image layout="fill" src="/LinkedIn.svg" alt="" />
                   </Contact.ImageContainer>
                   <Contact.Text>Marek Fodor</Contact.Text>
                 </Contact>
@@ -773,11 +720,7 @@ export default function Home() {
                   userSelect="none"
                 >
                   <Contact.ImageContainer>
-                    <Image
-                      layout="fill"
-                      src="/Instagram.svg"
-                      alt="Instagram Logo"
-                    />
+                    <Image layout="fill" src="/Instagram.svg" alt="" />
                   </Contact.ImageContainer>
                   <Contact.Text>Marek Fodor</Contact.Text>
                 </Contact>
@@ -789,7 +732,7 @@ export default function Home() {
                   userSelect="none"
                 >
                   <Contact.ImageContainer>
-                    <Image layout="fill" src="/GitHub.svg" alt="GitHub Logo" />
+                    <Image layout="fill" src="/GitHub.svg" alt="" />
                   </Contact.ImageContainer>
                   <Contact.Text>Marek Fodor</Contact.Text>
                 </Contact>
@@ -811,7 +754,7 @@ export default function Home() {
             >
               <Animate data-inviewport="popUp" delay="0.2s">
                 <Field>
-                  <Field.Label>From</Field.Label>
+                  <Field.Label htmlFor="email">From</Field.Label>
                   <Field.Input
                     type="email"
                     id="email"
@@ -829,7 +772,7 @@ export default function Home() {
               </Animate>
               <Animate data-inviewport="popUp" delay="0.2s">
                 <Field>
-                  <Field.Label>Message</Field.Label>
+                  <Field.Label htmlFor="message">Message</Field.Label>
                   <Field.Input
                     as="textarea"
                     data-size="big"
