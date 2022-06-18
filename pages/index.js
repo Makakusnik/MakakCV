@@ -306,11 +306,23 @@ export default function Home() {
                   </p>
                 </Animate>
                 <Animate data-inviewport="popRight">
-                  <Section.ArticleHeading>Future</Section.ArticleHeading>
+                  <Section.ArticleHeading>Present</Section.ArticleHeading>
                   <p>
-                    In near future, I&apos;m planning to publish coding blog
-                    where I&apos;ll post / translate articles about web
-                    development, design, server administration and many more.
+                    Currently I{"'"}m learning <strong>Chakra.js</strong>{" "}
+                    together with <strong>Typescript</strong> in project called{" "}
+                    <em>Nupp</em>.<br></br>
+                    <br></br>
+                    As I said, Nupp will be built on frontend with{" "}
+                    <strong>react, next.js chakra.js</strong> and on backend on
+                    top of <strong>node.js, express.js</strong> with{" "}
+                    <strong>mongo</strong> database.
+                    <br></br>
+                    <br></br>Nupp will be web app serving as {'"'}diet diary
+                    {'"'} where you have database with various groceries, meals,
+                    recipes and products with detailed info about their
+                    nutritions, energy and also price. Products will be mostly
+                    from Slovak grocery shops. You will be able to built your
+                    own diet plan with detailed macro nutrients and total price.
                   </p>
                 </Animate>
               </Section.ArticleContent>
