@@ -317,7 +317,15 @@ export default function Home() {
                     top of <strong>node.js, express.js</strong> with{" "}
                     <strong>mongo</strong> database.
                     <br></br>
-                    <br></br>Nupp will be web app serving as {'"'}diet diary
+                    <br></br>
+                    <InlineLink
+                      title="Nupp repository"
+                      target="_blank"
+                      href="https://www.syncreon.com/"
+                    >
+                      Nupp
+                    </InlineLink>{" "}
+                    will be web app serving as {'"'}diet diary
                     {'"'} where you have database with various groceries, meals,
                     recipes and products with detailed info about their
                     nutritions, energy and also price. Products will be mostly
