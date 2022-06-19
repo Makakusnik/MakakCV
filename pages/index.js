@@ -321,7 +321,7 @@ export default function Home() {
                     <InlineLink
                       title="Nupp repository"
                       target="_blank"
-                      href="https://www.syncreon.com/"
+                      href="https://github.com/Makakusnik/Nupp"
                     >
                       Nupp
                     </InlineLink>{" "}
