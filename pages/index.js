@@ -403,6 +403,9 @@ export default function Home() {
               </Section.ArticleContent>
               <Section.ArticleContent flexBasis="400px">
                 <Animate data-inviewport="popLeft">
+                  <Section.ArticleHeading center>
+                    Work
+                  </Section.ArticleHeading>
                   <ExperienceItem>
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
