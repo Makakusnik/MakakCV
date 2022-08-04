@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:description" content="Junior Frontend Developer" />
         <meta property="og:url" content="https://www.marekus.eu/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/MarekFodor.png" />
+        <meta property="og:image" content="/fb-og.png" />
         <title>Marek Fodor - Frontend Developer</title>
       </Head>
       <ThemeProvider theme={theme}>
