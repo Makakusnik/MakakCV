@@ -39,7 +39,6 @@ export default function Home() {
                 alt="Marek Fodor"
               />
               <figcaption hidden aria-hidden="true" tabIndex="-1">
-                {/* TODO uprav domenu*/}
                 Author and owner of www.marekus.eu
               </figcaption>
             </PhotoContainer>
@@ -294,16 +293,7 @@ export default function Home() {
                       Brain:IT
                     </InlineLink>
                     , where I was using mostly wordpress.
-                    <br></br>Currently I am working in{" "}
-                    <InlineLink
-                      title="Company website of Syncreon"
-                      target="_blank"
-                      href="https://www.syncreon.com/"
-                    >
-                      Syncreon
-                    </InlineLink>{" "}
-                    in Netherlands, as warehouse worker.
-                  </p>
+                    <br></br>Now I&apos;m just waiting for life-changing frontend/fullstack job opportunity :D.</p>
                 </Animate>
                 <Animate data-inviewport="popRight">
                   <Section.ArticleHeading>Present</Section.ArticleHeading>
@@ -325,7 +315,7 @@ export default function Home() {
                     >
                       Nupp
                     </InlineLink>{" "}
-                    will be web app serving as {'"'}diet diary
+                    will be web app serving as {'"'}diet diary {'&'} cost planner
                     {'"'} where you have database with various groceries, meals,
                     recipes and products with detailed info about their
                     nutritions, energy and also price. Products will be mostly
@@ -357,7 +347,7 @@ export default function Home() {
                     <ExperienceItem.Circle show />
                     <ExperienceItem.Content>
                       <ExperienceItem.Timestamp left={true} dateTime="P182D">
-                        4 / 2021 - 9 / 2022
+                        9 / 2015 - 6 / 2019
                       </ExperienceItem.Timestamp>
                       <Title fontSize="22px" as="h3">
                         <abbr title="Stredná Odborná Škola">SOŠ</abbr> Handlová
@@ -413,63 +403,6 @@ export default function Home() {
               </Section.ArticleContent>
               <Section.ArticleContent flexBasis="400px">
                 <Animate data-inviewport="popLeft">
-                  <Section.ArticleHeading center>Work</Section.ArticleHeading>
-                  <ExperienceItem>
-                    <ExperienceItem.Circle />
-                    <ExperienceItem.Content>
-                      <ExperienceItem.Timestamp left={false} dateTime="P90D">
-                        6 / 2018 - 9 / 2018
-                      </ExperienceItem.Timestamp>
-                      <Title fontSize="22px" as="h3">
-                        Tesco Distribution Centre, Thurrock UK
-                      </Title>
-                      <Text>Warehouse Worker</Text>
-                      <ExperienceItem.PictureContainer
-                        top={50}
-                        right={-30}
-                        opacity={0.5}
-                      >
-                        <Image
-                          layout="fixed"
-                          width="200"
-                          height="110"
-                          src="/tesco.svg"
-                          alt=""
-                        ></Image>
-                      </ExperienceItem.PictureContainer>
-                    </ExperienceItem.Content>
-                    <ExperienceItem.Circle show={true} />
-                  </ExperienceItem>
-                </Animate>
-                <Animate data-inviewport="popLeft">
-                  <ExperienceItem>
-                    <ExperienceItem.Circle />
-                    <ExperienceItem.Content>
-                      <ExperienceItem.Timestamp left={false} dateTime="P90D">
-                        5 / 2019 - 8 / 2019
-                      </ExperienceItem.Timestamp>
-                      <Title fontSize="22px" as="h3">
-                        Ocado, Tamsworth UK
-                      </Title>
-                      <Text>Warehouse worker</Text>
-                      <ExperienceItem.PictureContainer
-                        top={80}
-                        right={-10}
-                        opacity={0.5}
-                      >
-                        <Image
-                          layout="fixed"
-                          width="120"
-                          height="80"
-                          src="/ocado.svg"
-                          alt=""
-                        ></Image>
-                      </ExperienceItem.PictureContainer>
-                    </ExperienceItem.Content>
-                    <ExperienceItem.Circle show={true} />
-                  </ExperienceItem>
-                </Animate>
-                <Animate data-inviewport="popLeft">
                   <ExperienceItem>
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
@@ -507,7 +440,7 @@ export default function Home() {
                       <Title fontSize="22px" as="h3">
                         Brain:IT
                       </Title>
-                      <Text>Junior front-end developer</Text>
+                      <Text>Junior front-end developer - Itern</Text>
                       <ExperienceItem.PictureContainer
                         top={70}
                         right={-30}
@@ -530,7 +463,7 @@ export default function Home() {
                     <ExperienceItem.Circle />
                     <ExperienceItem.Content>
                       <ExperienceItem.Timestamp left={false}>
-                        9 / 2021 - {"            "}
+                        9 / 2021 - 7 / 2022
                       </ExperienceItem.Timestamp>
                       <Title fontSize="22px" as="h3">
                         Syncreon Tilburg, NL
