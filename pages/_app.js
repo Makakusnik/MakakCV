@@ -44,9 +44,6 @@ const GlobalStyles = createGlobalStyle`
         width: 100vw;
         overflow-x: hidden;
     }
-    
-
-    
 `;
 
 const inViewport = (entries) => {
@@ -81,6 +78,7 @@ function MyApp({ Component, pageProps }) {
           name="keywords"
           content="Marek,Fodor,Marek Fodor,Junior Frontend Developer,Frontend Developer,Frontend"
         />
+        <meta name="robots" content="noindex" />
         <meta name="author" content="Marek Fodor" />
         <meta property="og:title" content="Marek Fodor" />
         <meta property="og:description" content="Junior Frontend Developer" />
